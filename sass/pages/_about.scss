@@ -1,0 +1,209 @@
+.header_about{
+    max-height: 8rem;
+    background-image: url('/photos/lycs-architecture-gd.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 2px 8px 18px -9px #e2e2e2;
+    menu{
+        img{
+            width: 20rem;
+            object-fit: contain;
+        }
+        .list_menu{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            ul{
+                li{
+                    list-style: none;
+                    display: inline-block;
+                    margin: 0 2rem;
+                    a{
+                        color: white;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about{
+    .section_about_about{
+        &-title{
+            padding: 7rem 0rem 7rem 7rem;
+            @include respond(phone){
+                padding: 4rem;
+            }
+            h1{
+                font-size: 5rem;
+                font-weight: 700;
+                color: $blue_prosper_color;
+            }
+        }
+        &-desc{
+            padding: 7rem 7rem 7rem 0rem;
+            @include respond(phone){
+                padding: 4rem;
+            }
+        }
+    }
+
+    .section_visi_about{
+        max-width: 100vw;
+        width: 100vw;
+        margin: 0 calc(-50vw + 50%);
+        @include respond(phone){
+            padding: 4rem;
+            max-width: unset;
+            width: unset;
+            margin: 0;
+        }
+        &-desc{
+            background-color: $blue_prosper_color;
+            padding: 7rem 7rem 7rem 14rem;
+            @include respond (phone){
+                padding: 4rem;
+            }
+            h2{
+                font-size: 5rem;
+                color: white;
+                margin-bottom: 3.5rem;
+            }
+            ul{
+                li{
+                    color: white;
+                    margin-bottom: 2rem;
+                }
+            }
+            .visimisi{
+                margin-bottom: 4rem;
+            }
+        }
+        &-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            img{
+                width: 100%;
+                height: 40rem;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .section_why_about{
+        &-title{
+            text-align: center;
+            padding: 10rem 4rem 0;
+            h3{
+                font-size: 4rem;
+                color: $blue_prosper_color;
+                margin-bottom: 5rem;
+            }
+            p{
+                font-size: 3rem;
+                font-weight: 700;
+                color: $orange_prosper_color;
+            }
+        }
+        &-content{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 6rem;
+            img{
+                width: 100%;
+                height: 45rem;
+                object-fit: cover;
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    .section_download_about {
+        max-width: 100vw;
+        width: 100vw;
+        margin: 0 calc(-50vw + 50%);
+        background-color: black;
+
+        @include respond(phone){
+            padding: 4rem;
+            max-width: unset;
+            width: unset;
+            margin: 0;
+        }
+        .download{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem;
+            h4{
+                font-size: 2.5rem;
+                color: white;
+                margin-right: 3rem;
+            }
+        }
+
+    }
+
+    .section_say_about{
+        @media (min-width: 960px){
+            .MuiContainer-root {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        &-content{
+            padding: 10rem 0;
+            h3{
+                color: $blue_prosper_color;
+                font-size: 4rem;
+                text-align: center;
+            }
+            &--slider{
+                padding: 5rem 0;
+                .slick-active{
+                    .section_say_about-content--slider-item{
+                        opacity: 1 !important;
+                    }
+                }
+                &-item{
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: .4;
+                    transition: .8s all;
+                    outline: none;
+
+                    .text{
+                        padding: 5rem;
+                        background-color: #f9f9f9;
+                        margin-bottom: 8rem;
+                        margin: 2rem 2rem 8rem;
+                    }
+                    .cm{
+                        font-size: 2rem;
+                        color: $blue_prosper_color;
+                        margin: 2rem 0 0;
+                    }
+                    .MuiAvatar-root {
+                        margin: auto;
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

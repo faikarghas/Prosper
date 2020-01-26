@@ -1,0 +1,39 @@
+p{
+    font-size: 1.8rem;
+    font-family: 'Crimson Text', serif;
+    @include respond(phone){
+        font-size: 18px;
+    }
+}
+
+li{
+    font-size: 1.8rem;
+    font-family: 'Crimson Text', serif;
+    @include respond(phone){
+        font-size: 18px;
+    }
+}
+
+a{
+    font-family: 'Lato', sans-serif;
+}
+
+h1,h2,h3,h4,h5,th,td{
+    font-family: 'Lato', sans-serif;
+}
+
+label,button,span{
+    font-family: 'Lato', sans-serif;
+}
+
+input{
+    font-family: 'Crimson Text', serif;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+    &:focus{
+        outline: none;
+    }
+}
+
+// font-family: 'Lato', sans-serif;
+// font-family: 'Crimson Text', serif;

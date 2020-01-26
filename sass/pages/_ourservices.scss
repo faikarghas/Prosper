@@ -1,0 +1,122 @@
+.services{
+    .section_product_services{
+        padding: 10rem 0;
+        @include respond(phone){
+            padding: 0;
+        }
+        &-wrapper{
+            padding: 4rem;
+            @include respond(phone){
+                padding: 0;
+            }
+            .img{
+                width: 100%;
+                height: 45rem;
+                img{
+                    object-fit: cover;
+                }
+            }
+            .desc{
+                background-color: $blue_prosper_color;
+                padding: 5rem;
+                h2,h3,h4,p,li{
+                    color: white;
+                }
+                h2{
+                    font-size: 4rem;
+                    margin-bottom: 2rem;
+                    @include respond(phone){
+                        font-size: 24px;
+                    }
+                }
+                h3{
+                    font-size: 3rem;
+                    margin-bottom: 2rem;
+                    @include respond(phone){
+                        font-size: 22px;
+                    }
+
+                }
+                h4{
+                    font-size: 2.2rem;
+                    margin-bottom: 1.5rem;
+                    @include respond(phone){
+                        font-size: 20px;
+                    }
+                }
+                ul{
+                    padding-left: 50px;
+                    @include respond(phone){
+                        padding: 0;
+                    }
+                    li{
+                        position: relative;
+                        list-style: none;
+                        &::before{
+                            content: ">";
+                            color: $orange_prosper_color;
+                            position: absolute;
+                            left: -50px;
+                            @include respond(phone){
+                                content: "";
+                            }
+                        }
+                        ul{
+                            padding-left: 35px;
+                            li{
+                                margin-bottom: 2rem;
+                                p{
+                                    font-size: 2.2rem;
+                                }
+                                &::before{
+                                    content: "°";
+                                    color: $orange_prosper_color;
+                                    position: absolute;
+                                    left: -35px;
+                                    font-size: 2.2rem;
+                                    @include respond(phone){
+                                        content: "";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section_how_services{
+        &-title{
+            text-align: center;
+            margin-bottom: 3rem;
+            h2{
+                font-size: 3rem;
+                color: $blue_prosper_color;
+            }
+        }
+        &-desc{
+            padding: 2rem;
+            .img{
+                width: 100%;
+                height: 35rem;
+                padding: 5rem;
+                img{
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .desc{
+                h3{
+                    font-size: 2.5rem;
+                    color: $blue_prosper_color;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        .start{
+            text-align: center;
+            margin: 5rem 0;
+        }
+    }
+}
