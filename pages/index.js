@@ -50,9 +50,9 @@ function index () {
                                 <Grid item xs={9} className="list_menu">
                                     <ul>
                                         <li><Link href="/about"><a>About</a></Link></li>
-                                        <li><Link href="#"><a>Our Team</a></Link></li>
-                                        <li><Link href="#"><a>Our Services</a></Link></li>
-                                        <li><Link href="#"><a>Contact</a></Link></li>
+                                        <li><Link href="/team"><a>Our Team</a></Link></li>
+                                        <li><Link href="/services"><a>Our Services</a></Link></li>
+                                        <li><Link href="/contact"><a>Contact</a></Link></li>
                                     </ul>
                                 </Grid>
                             </Grid>
@@ -86,7 +86,7 @@ function index () {
                                                     <p>Our dedicated team of analysts and traders collaborate under consumer directives in managing the growth of allocated client equity</p>
                                                     <br/>
                                                     <br/>
-                                                    <Link href="#"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
+                                                    <Link href="/services#assets-management"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -102,7 +102,7 @@ function index () {
                                                     <p>Connect new promising ventures in early-stage enterprise with the appropriate source of capital from experienced clients</p>
                                                     <br/>
                                                     <br/>
-                                                    <Link href="#"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
+                                                    <Link href="/services#capital-fundraising"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -118,7 +118,7 @@ function index () {
                                                     <p>Provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually.</p>
                                                     <br/>
                                                     <br/>
-                                                    <Link href="#"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
+                                                    <Link href="/services#fixes-rate-notes"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -137,7 +137,7 @@ function index () {
                                         <br/>
                                         <br/>
                                         <br/>
-                                        <Link href="#"><a className="link_button"><Button variant="outlined" color="primary">Read More</Button></a></Link>
+                                        <Link href="/about"><a className="link_button"><Button variant="outlined" color="primary">Read More</Button></a></Link>
                                     </div>
                                 </Grid>
                                 <Grid item xs={12} lg={6}>
@@ -179,7 +179,7 @@ function index () {
                             <h2>Find Your Best Investment</h2>
                             <p>Our services cover investments in a while range of <br/> global, regional and country specific strategies.</p>
                             <div className="dp-center">
-                                <Link href="#"><a className="link_button"><Button variant="outlined" color="primary">Get Started</Button></a></Link>
+                                <Link href="/services#upload"><a className="link_button"><Button variant="outlined" color="primary">Get Started</Button></a></Link>
                             </div>
                             </Container>
                         </section>

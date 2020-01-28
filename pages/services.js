@@ -1,9 +1,22 @@
 import React, { Component, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Container,Grid,Button,GridListTile,Typography, Divider  } from '@material-ui/core'
+import { FilePond, registerPlugin } from 'react-filepond';
+import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
+import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
+
 import Footer from '../components/footer'
 
+registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview)
+
+
 function Services () {
+    const [file,setFile] = useState()
+    const pond = useRef()
+
+    function submit(params) {
+        console.log(file,'blabla');
+    }
     return (
         <React.Fragment>
             <header>
@@ -11,14 +24,14 @@ function Services () {
                     <menu>
                         <Grid container>
                             <Grid item xs={3}>
-                                <img src="/images/logo-prosper-putih.png" />
+                                <Link href="/"><a><img src="/images/logo-prosper-putih.png" /></a></Link>
                             </Grid>
                             <Grid item xs={9} className="list_menu">
                                 <ul>
                                     <li><Link href="/about"><a>About</a></Link></li>
-                                    <li><Link href="#"><a>Our Team</a></Link></li>
-                                    <li><Link href="#"><a>Our Services</a></Link></li>
-                                    <li><Link href="#"><a>Contact</a></Link></li>
+                                    <li><Link href="/team"><a>Our Team</a></Link></li>
+                                    <li><Link href="/services"><a>Our Services</a></Link></li>
+                                    <li><Link href="/contact"><a>Contact</a></Link></li>
                                 </ul>
                             </Grid>
                         </Grid>
@@ -32,7 +45,7 @@ function Services () {
             <main className="services">
                 <section className="section_product_services">
                     <Container>
-                        <div className="section_product_services-wrapper">
+                        <div className="section_product_services-wrapper" id="assets-management">
                             <div className="img">
                                 <img src="/photos/chris-liverani.jpg" width="100%" height="100%"/>
                             </div>
@@ -56,7 +69,7 @@ function Services () {
                                 </ul>
                             </div>
                         </div>
-                        <div className="section_product_services-wrapper">
+                        <div className="section_product_services-wrapper" id="capital-fundraising">
                             <div className="img">
                                 <img src="/photos/annie-spratt.jpg" width="100%" height="100%"/>
                             </div>
@@ -159,7 +172,7 @@ function Services () {
                                 </ul>
                             </div>
                         </div>
-                        <div className="section_product_services-wrapper">
+                        <div className="section_product_services-wrapper" id="fixed-rate-notes">
                             <div className="img">
                                 <img src="/photos/markus-spiske.jpg" width="100%" height="100%"/>
                             </div>
@@ -221,6 +234,122 @@ function Services () {
                                     <Link href="#"><a className="link_button"><Button variant="outlined" color="primary">Start Now</Button></a></Link>
                                 </div>
                             </Grid>
+                        </Grid>
+                    </Container>
+                </section>
+                <section className="section_upload_services" id="upload">
+                    <Container>
+                        <Grid container>
+                            <Grid item xs={12}>
+                                <div className="section_upload_services-title">
+                                    <h2>Submit Your Documents</h2>
+                                    <h3>Upload files in .pdf format in the boxes below.</h3>
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <div className="section_upload_services-upload">
+                                    <div className="title">
+                                        <h4>Company Profile</h4>
+                                    </div>
+                                    {/* upload */}
+                                    <FilePond
+                                        ref={pond}
+                                        name={"file"}
+                                        allowMultiple={false}
+                                        maxFiles={1}
+                                        oninit={() => submit() }
+                                        onupdatefiles={fileItems => {
+                                            // Set currently active file objects to this.state
+                                            // setFile({
+                                            //     files: fileItems.map(fileItem => fileItem.file)
+                                            // })
+                                            fileItems.map(fileItem => {
+                                                console.log(
+                                                    fileItem.file
+                                                );
+                                                setFile(fileItem.file)
+                                            })
+                                        }}
+                                        // server='/api'
+                                        server='http://localhost:3009/api/upload'
+                                    />
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <div className="section_upload_services-upload">
+                                    <div className="title">
+                                        <h4>Business Securities</h4>
+                                    </div>
+                                    {/* upload */}
+                                    <FilePond
+                                        name={"file"}
+                                        allowMultiple={false}
+                                        maxFiles={1}
+                                        server='http://localhost:3009/api/upload'
+                                    />
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <div className="section_upload_services-upload">
+                                    <div className="title">
+                                        <h4>Project Executive Summary</h4>
+                                    </div>
+                                    {/* upload */}
+                                    <FilePond
+                                        name={"file"}
+                                        allowMultiple={false}
+                                        maxFiles={1}
+                                        server='http://localhost:3009/api/upload'
+                                    />
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <div className="section_upload_services-upload">
+                                    <div className="title">
+                                        <h4>Surat Kredit Berdokumen dalam Negeri / Bank Garansi (Jika Ada)</h4>
+                                    </div>
+                                    {/* upload */}
+                                    <FilePond
+                                        name={"file"}
+                                        allowMultiple={false}
+                                        maxFiles={1}
+                                        server='http://localhost:3009/api/upload'
+                                    />
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <div className="section_upload_services-upload">
+                                    <div className="title">
+                                        <h4>Dokumen Jaminan / Agunan (Jika Ada)</h4>
+                                    </div>
+                                    {/* upload */}
+                                    <FilePond
+                                        name={"file"}
+                                        allowMultiple={false}
+                                        maxFiles={1}
+                                        server='http://localhost:3009/api/upload'
+                                    />
+                                </div>
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <div className="section_upload_services-upload">
+                                    <div className="title">
+                                        <h4>Mutasi Rekening Bank (6 Bulan Terakhir)</h4>
+                                    </div>
+                                    {/* upload */}
+                                    <FilePond
+                                        name={"file"}
+                                        allowMultiple={false}
+                                        maxFiles={1}
+                                        server='http://localhost:3009/api/upload'
+                                    />
+                                </div>
+                            </Grid>
+                            {/* <Grid item xs={12} md={4}>
+                                <div className="section_upload_services-submit">
+                                    <Button className="button_submit" variant="outlined" color="primary">Start Now</Button>
+                                </div>
+                            </Grid> */}
                         </Grid>
                     </Container>
                 </section>

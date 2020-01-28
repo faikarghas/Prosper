@@ -119,4 +119,36 @@
             margin: 5rem 0;
         }
     }
+
+    .section_upload_services{
+        background-image: url('/images/gradient.png');
+        background-size: cover;
+        padding: 10rem 0;
+        &-title{
+            margin-bottom: 4rem;
+            h2{
+                font-size: 3rem;
+                color: white;
+                margin-bottom: 1rem;
+            }
+            h3{
+                color: rgba(255, 255, 255, 0.822);
+                font-size: 2.2rem;
+                font-weight: 400;
+            }
+        }
+
+        &-upload{
+            padding: 2rem;
+            .title{
+                height: 7rem;
+                h4{
+                    font-size: 2rem;
+                    font-weight: 400;
+                    color: white;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
 }

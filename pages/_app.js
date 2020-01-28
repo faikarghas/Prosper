@@ -3,8 +3,9 @@ import React from 'react';
 import Router from 'next/router';
 import NProgress from 'nprogress'
 
-import '../sass/main.scss'
-import 'react-multi-carousel/lib/styles.css'
+import '../sass/main.scss';
+import 'filepond/dist/filepond.min.css';
+import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 
 // NProgress
 Router.events.on('routeChangeStart', url => {

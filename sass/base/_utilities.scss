@@ -45,3 +45,20 @@
     display: flex;
     margin: auto;
 }
+
+.button_submit{
+    background-color: #f15d2a;
+    color: #fff;
+    border: 1px solid #f15d2a;
+    box-shadow: 0 2px 7px 0 #f15d2a;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    text-transform: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    &:hover{
+        background-color: #f15d2a;
+        border: 1px solid #f15d2a;
+        box-shadow: 0 4px 14px 0 #f15d2a;
+    }
+}
