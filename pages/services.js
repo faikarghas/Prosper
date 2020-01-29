@@ -19,7 +19,7 @@ function Services () {
     }
     return (
         <React.Fragment>
-            <header>
+            <header className="header_services">
                 <Container>
                     <menu>
                         <Grid container>
@@ -231,7 +231,7 @@ function Services () {
                             </Grid>
                             <Grid item xs={12}>
                                 <div className="start">
-                                    <Link href="#"><a className="link_button"><Button variant="outlined" color="primary">Start Now</Button></a></Link>
+                                    <Link href="#upload"><a className="link_button"><Button variant="outlined" color="primary">Start Now</Button></a></Link>
                                 </div>
                             </Grid>
                         </Grid>
@@ -253,25 +253,10 @@ function Services () {
                                     </div>
                                     {/* upload */}
                                     <FilePond
-                                        ref={pond}
                                         name={"file"}
                                         allowMultiple={false}
                                         maxFiles={1}
-                                        oninit={() => submit() }
-                                        onupdatefiles={fileItems => {
-                                            // Set currently active file objects to this.state
-                                            // setFile({
-                                            //     files: fileItems.map(fileItem => fileItem.file)
-                                            // })
-                                            fileItems.map(fileItem => {
-                                                console.log(
-                                                    fileItem.file
-                                                );
-                                                setFile(fileItem.file)
-                                            })
-                                        }}
-                                        // server='/api'
-                                        server='http://localhost:3009/api/upload'
+                                        server='https://api.prosperventura.com/api/upload'
                                     />
                                 </div>
                             </Grid>
@@ -285,7 +270,7 @@ function Services () {
                                         name={"file"}
                                         allowMultiple={false}
                                         maxFiles={1}
-                                        server='http://localhost:3009/api/upload'
+                                        server='https://api.prosperventura.com/api/upload'
                                     />
                                 </div>
                             </Grid>
@@ -299,7 +284,7 @@ function Services () {
                                         name={"file"}
                                         allowMultiple={false}
                                         maxFiles={1}
-                                        server='http://localhost:3009/api/upload'
+                                        server='https://api.prosperventura.com/api/upload'
                                     />
                                 </div>
                             </Grid>
@@ -313,7 +298,7 @@ function Services () {
                                         name={"file"}
                                         allowMultiple={false}
                                         maxFiles={1}
-                                        server='http://localhost:3009/api/upload'
+                                        server='https://api.prosperventura.com/api/upload'
                                     />
                                 </div>
                             </Grid>
@@ -327,7 +312,7 @@ function Services () {
                                         name={"file"}
                                         allowMultiple={false}
                                         maxFiles={1}
-                                        server='http://localhost:3009/api/upload'
+                                        server='https://api.prosperventura.com/api/upload'
                                     />
                                 </div>
                             </Grid>
@@ -341,15 +326,10 @@ function Services () {
                                         name={"file"}
                                         allowMultiple={false}
                                         maxFiles={1}
-                                        server='http://localhost:3009/api/upload'
+                                        server='https://api.prosperventura.com/api/upload'
                                     />
                                 </div>
                             </Grid>
-                            {/* <Grid item xs={12} md={4}>
-                                <div className="section_upload_services-submit">
-                                    <Button className="button_submit" variant="outlined" color="primary">Start Now</Button>
-                                </div>
-                            </Grid> */}
                         </Grid>
                     </Container>
                 </section>

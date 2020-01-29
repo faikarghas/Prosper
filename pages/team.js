@@ -6,7 +6,7 @@ import Footer from '../components/footer'
 function Team () {
     return (
         <React.Fragment>
-            <header>
+            <header className="header_team">
                 <Container>
                     <menu>
                         <Grid container>

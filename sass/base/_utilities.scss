@@ -4,7 +4,7 @@
         background-color: $orange_prosper_color;
         color: white;
         border: 1px solid $orange_prosper_color;
-        box-shadow: 0 2px 7px 0 $orange_prosper_color;
+        // box-shadow: 0 2px 7px 0 $orange_prosper_color;
         border-radius: 40px;
         font-size: 1.4rem;
         text-transform: none;
@@ -14,7 +14,7 @@
         &:hover{
             background-color: $orange_prosper_color;
             border: 1px solid $orange_prosper_color;
-            box-shadow: 0 4px 14px 0 $orange_prosper_color;
+            // box-shadow: 0 4px 14px 0 $orange_prosper_color;
         }
     }
 }
@@ -50,7 +50,7 @@
     background-color: #f15d2a;
     color: #fff;
     border: 1px solid #f15d2a;
-    box-shadow: 0 2px 7px 0 #f15d2a;
+    // box-shadow: 0 2px 7px 0 #f15d2a;
     border-radius: 40px;
     font-size: 1.4rem;
     text-transform: none;
@@ -59,6 +59,22 @@
     &:hover{
         background-color: #f15d2a;
         border: 1px solid #f15d2a;
-        box-shadow: 0 4px 14px 0 #f15d2a;
+        // box-shadow: 0 4px 14px 0 #f15d2a;
     }
+}
+
+.header_home{
+    background-image: url('/photos/lycs-architecture-gd.png');
+}
+
+.header_team{
+    background-image: url('/photos/austin-distel2.jpg');
+}
+
+.header_contact{
+    background-image: url('/photos/drew-beamer.jpg');
+}
+
+.header_services{
+    background-image: url('/photos/christian-dubovan.jpg');
 }

@@ -12,11 +12,19 @@ const handle    = app.getRequestHandler();
 
 
 const sitemapOptions = {
-    root: __dirname + '/static/sitemap/',
+    root: __dirname + '/public/',
     headers: {
         'Content-Type': 'text/xml;charset=UTF-8'
     }
 };
+
+const robotsOptions = {
+    root: __dirname + '/public/',
+    headers: {
+        'Content-Type': 'text/plain;charset=UTF-8'
+    }
+};
+
 
 app.prepare()
 .then(()=>{
@@ -24,6 +32,10 @@ app.prepare()
     server.use(compression());
     server.use(cookieParser());
     if( process.env.NODE_ENV === 'production' ) server.use(enforce.HTTPS({ trustProtoHeader: true }))
+
+
+    server.get('/sitemap.xml', (req, res) => res.status(200).sendFile('sitemap.xml', sitemapOptions));
+    server.get('/robots.txt', (req, res) => res.status(200).sendFile('robots.txt', robotsOptions));
 
     server.get('*', (req, res) => {
         return handle(req, res)

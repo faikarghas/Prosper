@@ -18,6 +18,9 @@
         padding: 5rem 0;
         .cm{
             padding: 4rem 0;
+            @include respond(phone){
+                padding: 4rem;
+            }
             h2{
                 font-size: 4rem;
                 color: $blue_prosper_color;
@@ -55,6 +58,9 @@
         }
         .cm{
             padding: 4rem 0;
+            @include respond(phone){
+                padding: 4rem;
+            }
             h2{
                 font-size: 4rem;
                 color: $blue_prosper_color;

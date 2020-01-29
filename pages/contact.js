@@ -40,12 +40,12 @@ function Contact () {
                 message: values.message,
             }
 
-            console.log(data);
-
-            fetch('http://localhost:3007/api/postform',{
+            fetch('https://api.prosperventura.com/api/postform',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify({data})
+            }).then((data)=>{
+                console.log(data);
             })
 
         },
@@ -53,7 +53,7 @@ function Contact () {
 
     return (
         <React.Fragment>
-            <header>
+            <header className="header_contact">
                 <Container>
                     <menu>
                         <Grid container>
@@ -181,6 +181,8 @@ function Contact () {
                                                     id="message"
                                                     placeholder="Message"
                                                     onChange={formik.handleChange} value={formik.values.message}
+                                                    className="input_message"
+                                                    multiline={true}
                                                 />
                                             </Grid>
                                             <Grid item container xs={12} style={{paddingTop:0}}>

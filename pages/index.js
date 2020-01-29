@@ -40,7 +40,7 @@ function index () {
     // const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
         return (
             <React.Fragment>
-                <header>
+                <header className="header_home">
                     <Container>
                         <menu>
                             <Grid container>
@@ -73,7 +73,7 @@ function index () {
                     {/* <Container> */}
                         <section id="products" ref={elementToScrollRef} className="section_products_home">
                         <Container style={{position:'relative',height:'100%'}}>
-                            <div className="offset-up" style={{WebkitTransform:`translate(-50%,${-trans}px)`,msTransform:`translate(-50%,${-trans}px)`,transform:`translate(-50%,${-trans}px)`}}>
+                            <div className="offset-up">
                                 <Grid container spacing={3}>
                                     <Grid item xs={12} lg={4}>
                                         <div className="box_wrapper">
