@@ -8,24 +8,30 @@
 
 
 <url>
-  <loc>https://www.dignitestudio.com</loc>
-  <lastmod>2019-09-02T13:53:28+00:00</lastmod>
+  <loc>https://www.prosperventura.com/</loc>
+  <lastmod>2020-01-29T14:49:07+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.dignitestudio.com/about</loc>
-  <lastmod>2019-09-02T13:53:28+00:00</lastmod>
+  <loc>https://www.prosperventura.com/about</loc>
+  <lastmod>2020-01-29T14:49:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dignitestudio.com/work</loc>
-  <lastmod>2019-09-02T13:53:28+00:00</lastmod>
+  <loc>https://www.prosperventura.com/team</loc>
+  <lastmod>2020-01-29T14:49:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.dignitestudio.com/blog</loc>
-  <lastmod>2019-09-02T13:53:28+00:00</lastmod>
+  <loc>https://www.prosperventura.com/services</loc>
+  <lastmod>2020-01-29T14:49:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://www.prosperventura.com/contact</loc>
+  <lastmod>2020-01-29T14:49:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
 
 </urlset>

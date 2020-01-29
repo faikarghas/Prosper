@@ -160,7 +160,7 @@ function index () {
                                     <img className="img_partner" src="/images/NorthCliff.png" width="180px" alt="NorthCliff-logo"/>
                                 </Grid>
                                 <Grid item xs={6} lg={4} className="dp-center box_img">
-                                    <img className="img_partner" src="/images/EscoAuto.png" width="180px" alt="EscoAuto-logo"/>
+                                    <img className="img_partner" src="/images/spotless.png" width="180px" alt="spotless-logo"/>
                                 </Grid>
                                 <Grid item xs={6} lg={4} className="dp-center box_img">
                                     <img className="img_partner" src="/images/TSM.png" width="180px" alt="TSM-logo"/>
