@@ -41,7 +41,7 @@ function Contact () {
             }
 
             setLoading(true)
-            fetch('https://api.dignitestudio.com/api/postform',{
+            fetch('https://api.prosperventura.com/api/postform',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify({data})
