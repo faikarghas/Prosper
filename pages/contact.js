@@ -30,7 +30,7 @@ function Contact () {
             phonenumber: Yup.number(),
             message: Yup.string().required('Cannot be left blank').min(3, 'Must be 3 characters or less'),
         }),
-        onSubmit: (values,{setFieldError}) => {
+        onSubmit: (values,{setFieldError,resetForm}) => {
             const data = {
                 firstname: values.firstname,
                 lastname: values.lastname,
@@ -40,12 +40,15 @@ function Contact () {
                 message: values.message,
             }
 
-            fetch('http://localhost:3007/api/postform',{
+            setLoading(true)
+            fetch('https://api.dignitestudio.com/api/postform',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify({data})
             }).then((data)=>{
                 console.log(data);
+                resetForm()
+                setLoading(false)
             })
 
         },
@@ -65,7 +68,7 @@ function Contact () {
                                     <li><Link href="/about"><a>About</a></Link></li>
                                     <li><Link href="/team"><a>Our Team</a></Link></li>
                                     <li><Link href="/services"><a>Our Services</a></Link></li>
-                                    <li><Link href="/contact"><a>Contact</a></Link></li>
+                                    <li><Link href="/contact"><a className="border-init">Contact</a></Link></li>
                                 </ul>
                             </Grid>
                         </Grid>
@@ -192,9 +195,8 @@ function Contact () {
                                             </Grid>
                                             <Grid item xs={12} className="button_wrapper">
                                                 <Button className="button_submit" variant="outlined" color="primary" type="submit" disabled={loading} >
-                                                    Submit
+                                                    {loading ? <CircularProgress size={24} className="buttonProgress" /> : 'Submit'}
                                                 </Button>
-                                                {loading && <CircularProgress size={24} className="buttonProgress" />}
                                             </Grid>
                                         </Grid>
                                     </form>

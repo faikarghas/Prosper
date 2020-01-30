@@ -52,7 +52,7 @@ function About ({deviceType}) {
                             </Grid>
                             <Grid item xs={9} className="list_menu">
                                 <ul>
-                                    <li><Link href="/about"><a>About</a></Link></li>
+                                    <li><Link href="/about"><a className="border-init">About</a></Link></li>
                                     <li><Link href="/team"><a>Our Team</a></Link></li>
                                     <li><Link href="/services"><a>Our Services</a></Link></li>
                                     <li><Link href="/contact"><a>Contact</a></Link></li>

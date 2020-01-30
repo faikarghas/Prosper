@@ -30,7 +30,7 @@ function Services () {
                                 <ul>
                                     <li><Link href="/about"><a>About</a></Link></li>
                                     <li><Link href="/team"><a>Our Team</a></Link></li>
-                                    <li><Link href="/services"><a>Our Services</a></Link></li>
+                                    <li><Link href="/services"><a className="border-init">Our Services</a></Link></li>
                                     <li><Link href="/contact"><a>Contact</a></Link></li>
                                 </ul>
                             </Grid>

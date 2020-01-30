@@ -1,0 +1,137 @@
+header{
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 2px 8px 18px -9px #e2e2e2;
+    menu{
+        img{
+            width: 20rem;
+            object-fit: contain;
+        }
+        .list_menu{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            ul{
+                li{
+                    list-style: none;
+                    display: inline-block;
+                    margin: 0 2rem;
+                    a{
+                        color: white;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        text-decoration: none;
+                        padding: 1rem 0;
+                        border-bottom: 2px solid rgba(255, 255, 255, 0);
+                        transition: .5s all;
+                        &:hover{
+                            border-bottom: 2px solid rgb(255, 255, 255);
+                        }
+                    }
+                    .border-init{
+                        border-bottom: 2px solid rgb(255, 255, 255);
+                    }
+
+                }
+            }
+        }
+    }
+
+    .header_text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        h1{
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        p{
+            color: white;
+        }
+    }
+    .explore{
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        cursor: pointer;
+        @include respond(phone){
+            bottom: 5%;
+        }
+        &:hover{
+            img{
+                transform: translateY(-5px);
+            }
+        }
+        p{
+            color: white;
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            text-decoration: none;
+            @include respond(phone){
+                font-size: 3.7rem;
+            }
+        }
+        img{
+            width: 2.5rem;
+            object-fit: contain;
+            transition: .2s all linear;
+            @include respond(phone){
+                width: 3.5rem;
+            }
+        }
+    }
+}
+
+.header_about{
+    max-height: 8rem;
+    background-image: url('/photos/lycs-architecture-gd.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 2px 8px 18px -9px #e2e2e2;
+    menu{
+        img{
+            width: 20rem;
+            object-fit: contain;
+        }
+        .list_menu{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            ul{
+                li{
+                    list-style: none;
+                    display: inline-block;
+                    margin: 0 2rem;
+
+                    a{
+                        color: white;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        text-decoration: none;
+                        padding: 1rem 0;
+                        border-bottom: 2px solid rgba(255, 255, 255, 0);
+                        transition: .5s all;
+                        &:hover{
+                            border-bottom: 2px solid rgb(255, 255, 255);
+                        }
+                    }
+                    .border-init{
+                        border-bottom: 2px solid rgb(255, 255, 255);
+                    }
+
+                }
+            }
+        }
+    }
+}
