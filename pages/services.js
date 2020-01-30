@@ -44,7 +44,7 @@ function Services () {
             </header>
             <main className="services">
                 <section className="section_product_services">
-                    <Container>
+                    <Container maxWidth="xl">
                         <div className="section_product_services-wrapper" id="assets-management">
                             <div className="img">
                                 <img src="/photos/chris-liverani.jpg" width="100%" height="100%"/>
@@ -187,7 +187,7 @@ function Services () {
                     </Container>
                 </section>
                 <section className="section_how_services">
-                    <Container>
+                    <Container maxWidth="xl">
                         <Grid container>
                             <Grid item xs={12}>
                                 <div className="section_how_services-title">
@@ -232,13 +232,14 @@ function Services () {
                             <Grid item xs={12}>
                                 <div className="start">
                                     <Link href="#upload"><a className="link_button"><Button variant="outlined" color="primary">Start Now</Button></a></Link>
+                                    <img src="/images/dropdown-arrow-blue.png" />
                                 </div>
                             </Grid>
                         </Grid>
                     </Container>
                 </section>
                 <section className="section_upload_services" id="upload">
-                    <Container>
+                    <Container maxWidth="xl">
                         <Grid container>
                             <Grid item xs={12}>
                                 <div className="section_upload_services-title">

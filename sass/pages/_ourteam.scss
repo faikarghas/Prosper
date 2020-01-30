@@ -9,13 +9,12 @@
     }
     p{
         color: white;
-        font-size: 2rem;
     }
 }
 
 .team{
     .section_commissioner_team{
-        padding: 5rem 0;
+        padding: 5rem 4rem;
         .cm{
             padding: 4rem 0;
             @include respond(phone){
@@ -47,9 +46,9 @@
     }
 
     .section_founder_team{
-        padding: 5rem 0;
+        padding: 5rem 4rem;
         .photo{
-            padding: 4rem;
+            padding: 4rem 4rem 4rem 0rem;
             img{
                 width: 100%;
                 min-height: 30rem;

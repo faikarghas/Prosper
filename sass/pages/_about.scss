@@ -20,6 +20,7 @@
                     list-style: none;
                     display: inline-block;
                     margin: 0 2rem;
+
                     a{
                         color: white;
                         font-size: 1.6rem;
@@ -34,38 +35,37 @@
 
 .about{
     .section_about_about{
+        padding: 4rem;
+
         &-title{
-            padding: 7rem 0rem 7rem 7rem;
-            @include respond(phone){
-                padding: 4rem;
-            }
             h1{
                 font-size: 5rem;
                 font-weight: 700;
                 color: $blue_prosper_color;
             }
+            @include respond(phone){
+                margin-bottom: 4rem;
+            }
         }
         &-desc{
-            padding: 7rem 7rem 7rem 0rem;
-            @include respond(phone){
-                padding: 4rem;
-            }
         }
     }
 
     .section_visi_about{
-        max-width: 100vw;
-        width: 100vw;
-        margin: 0 calc(-50vw + 50%);
+        padding: 4rem 0 4rem 0;
+
+        @media (min-width: 960px){
+            .MuiContainer-root {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
         @include respond(phone){
-            padding: 4rem;
-            max-width: unset;
-            width: unset;
-            margin: 0;
+            padding: 0;
         }
         &-desc{
             background-color: $blue_prosper_color;
-            padding: 7rem 7rem 7rem 14rem;
+            padding: 4rem;
             @include respond (phone){
                 padding: 4rem;
             }
@@ -78,6 +78,13 @@
                 li{
                     color: white;
                     margin-bottom: 2rem;
+                    list-style: none;
+                    &:before{
+                        content: ">";
+                        color: #f15d2a;
+                        position: absolute;
+                        left: 20px;
+                    }
                 }
             }
             .visimisi{
@@ -99,9 +106,13 @@
     }
 
     .section_why_about{
+        padding: 4rem;
+        background-color: #F9F9F9;
         &-title{
             text-align: center;
-            padding: 10rem 4rem 0;
+            @include respond(phone){
+                margin-bottom: 4rem;
+            }
             h3{
                 font-size: 4rem;
                 color: $blue_prosper_color;
@@ -112,13 +123,20 @@
                 font-weight: 700;
                 color: $orange_prosper_color;
                 line-height: 29px;
+                @include respond(phone){
+                    line-height: unset;
+                }
             }
         }
         &-content{
             display: flex;
             justify-content: center;
             flex-direction: column;
-            padding: 6rem;
+            padding: 4rem;
+            @include respond(phone){
+                padding: 0;
+                margin-bottom: 8rem;
+            }
             img{
                 width: 100%;
                 height: 45rem;

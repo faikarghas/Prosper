@@ -1,11 +1,10 @@
 .services{
     .section_product_services{
-        padding: 10rem 0;
+        padding: 10rem 4rem;
         @include respond(phone){
             padding: 0;
         }
         &-wrapper{
-            padding: 4rem;
             @include respond(phone){
                 padding: 0;
             }
@@ -38,7 +37,7 @@
 
                 }
                 h4{
-                    font-size: 2.2rem;
+                    font-size: 1.8rem;
                     margin-bottom: 1.5rem;
                     @include respond(phone){
                         font-size: 20px;
@@ -87,32 +86,28 @@
     }
 
     .section_how_services{
+        padding: 4rem;
+        background-color: #F9F9F9;
         &-title{
             text-align: center;
-            margin-bottom: 3rem;
-            @include respond(phone){
-                padding: 4rem;
-            }
+            margin-bottom: 4rem;
             h2{
                 font-size: 3rem;
                 color: $blue_prosper_color;
             }
         }
         &-desc{
-            padding: 2rem;
-            @include respond(phone){
-                padding: 4rem;
-            }
             .img{
                 width: 100%;
-                height: 35rem;
-                padding: 5rem;
+                height: 20rem;
+                padding: 3rem 4rem;
                 img{
                     height: 100%;
                     object-fit: contain;
                 }
             }
             .desc{
+                padding: 4rem;
                 h3{
                     font-size: 2.5rem;
                     color: $blue_prosper_color;
@@ -123,13 +118,21 @@
         .start{
             text-align: center;
             margin: 5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            img{
+                width: 20px;
+                margin-top: 1.5rem;
+            }
         }
     }
 
     .section_upload_services{
         background-image: url('/images/gradient.png');
         background-size: cover;
-        padding: 10rem 0;
+        padding: 10rem 4rem;
         &-title{
             margin-bottom: 4rem;
             h2{

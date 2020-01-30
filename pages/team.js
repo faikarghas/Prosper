@@ -31,7 +31,7 @@ function Team () {
             </header>
             <main className="team">
                 <section className="section_commissioner_team">
-                    <Container>
+                    <Container maxWidth="xl">
                         <div className="cm">
                             <h2>Dr. Ir. Bambang Nariyono, MM.</h2>
                             <h3>Head Commissioner</h3>
@@ -59,7 +59,7 @@ function Team () {
                 </section>
                 <Container> <div className="divider"></div></Container>
                 <section className="section_founder_team">
-                    <Container>
+                    <Container maxWidth="xl">
                         <Grid container>
                             <Grid item xs={12} md={3}>
                                 <div className="photo">

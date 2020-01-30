@@ -1,5 +1,5 @@
 .section_infoandform_contact{
-    padding: 10rem 0;
+    padding: 10rem 4rem;
     .title{
         padding-bottom: 10rem;
         text-align: center;
@@ -14,9 +14,8 @@
         }
     }
     .prosper_info{
-        padding: 0 0 7rem 7rem;
         @include respond(phone){
-            padding: 4rem;
+            // padding: 4rem;
             margin-bottom: 10rem;
         }
         h3{
@@ -33,14 +32,14 @@
         }
     }
     .contact_form{
-        padding: 0 7rem 7rem 0;
         @include respond(phone){
-            padding: 4rem;
+            // padding: 4rem;
         }
         .MuiOutlinedInput-input {
-            font-size: 2rem;
+            font-size: 1.8rem;
             &::placeholder{
-                font-size: 2rem;
+                font-size: 1.8rem;
+                font-family: 'Crimson Text', serif;
             }
         }
         .button_wrapper{
@@ -50,16 +49,15 @@
                 background-color: #f15d2a;
                 color: #fff;
                 border: 1px solid #f15d2a;
-                // box-shadow: 0 2px 7px 0 #f15d2a;
                 border-radius: 40px;
                 font-size: 1.4rem;
                 text-transform: none;
-                padding: 5px 15px;
+                padding: 5px 39px;
+
                 cursor: pointer;
                 &:hover{
                     background-color: #f15d2a;
                     border: 1px solid #f15d2a;
-                    // box-shadow: 0 4px 14px 0 #f15d2a;
                 }
             }
         }
@@ -73,7 +71,7 @@
 }
 
 .section_location_contact{
-    padding: 5rem 0;
+    padding: 5rem 4rem;
     @include respond(phone){
         padding: 4rem;
     }

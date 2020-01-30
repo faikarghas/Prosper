@@ -40,7 +40,7 @@ function Contact () {
                 message: values.message,
             }
 
-            fetch('https://api.prosperventura.com/api/postform',{
+            fetch('http://localhost:3007/api/postform',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify({data})
@@ -77,7 +77,7 @@ function Contact () {
             </header>
             <main className="contact">
                 <section className="section_infoandform_contact">
-                    <Container>
+                    <Container maxWidth="xl">
                         <Grid container>
                             <Grid item xs={12}>
                                 <div className="title">
@@ -191,7 +191,7 @@ function Contact () {
                                                 </p>
                                             </Grid>
                                             <Grid item xs={12} className="button_wrapper">
-                                                <Button class="button_submit" variant="outlined" color="primary" type="submit" disabled={loading} >
+                                                <Button className="button_submit" variant="outlined" color="primary" type="submit" disabled={loading} >
                                                     Submit
                                                 </Button>
                                                 {loading && <CircularProgress size={24} className="buttonProgress" />}
@@ -205,10 +205,10 @@ function Contact () {
                 </section>
                 <Container> <div className="divider"></div></Container>
                 <section className="section_location_contact">
-                    <Container>
+                    <Container maxWidth="xl">
                         <Grid container>
                             <Grid item xs={12}>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253839.4288106847!2d106.55676354758008!3d-6.231917547432736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f36f368ebbd5%3A0x98c0b77a7bc81932!2sVinoti%20Living!5e0!3m2!1sen!2sid!4v1580240563619!5m2!1sen!2sid" width="600" height="450" frameborder="0" style={{border:0}} allowfullscreen=""></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253839.4288106847!2d106.55676354758008!3d-6.231917547432736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f36f368ebbd5%3A0x98c0b77a7bc81932!2sVinoti%20Living!5e0!3m2!1sen!2sid!4v1580240563619!5m2!1sen!2sid" width="600" height="450" frameBorder="0" style={{border:0}} allowFullscreen=""></iframe>
                             </Grid>
                         </Grid>
                     </Container>
