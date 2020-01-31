@@ -83,7 +83,7 @@ function index () {
                                                     <div className="desc">
                                                         <h3>Asset Management</h3>
                                                         <br/>
-                                                        <p>Our dedicated team of analysts and traders collaborate under consumer directives in managing the growth of allocated client equity</p>
+                                                        <p>Our dedicated team of analysts and traders collaborate under consumer directives in managing the growth of allocated client equity.</p>
                                                         <br/>
                                                         <br/>
                                                         <Link href="/services#assets-management"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
@@ -99,7 +99,7 @@ function index () {
                                                     <div className="desc">
                                                         <h3>Capital Fundraising</h3>
                                                         <br/>
-                                                        <p>Connect new promising ventures in early-stage enterprise with the appropriate source of capital from experienced clients</p>
+                                                        <p>Connect new promising ventures in early-stage enterprise with the appropriate source of capital from experienced clients.</p>
                                                         <br/>
                                                         <br/>
                                                         <Link href="/services#capital-fundraising"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>

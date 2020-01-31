@@ -38,7 +38,7 @@
             h2{
                 font-size: 3rem;
                 color: white;
-                margin-bottom: 3.5rem;
+                margin-bottom: 2rem;
             }
             ul{
                 li{
@@ -49,12 +49,16 @@
                         content: ">";
                         color: #f15d2a;
                         position: absolute;
-                        left: 20px;
+                        left: 40px;
                     }
                 }
             }
             .visimisi{
                 margin-bottom: 4rem;
+                @media (min-width: 960px){
+                    padding-left: 32px;
+                    padding-right: 32px;
+                }
             }
         }
         &-img{
@@ -82,7 +86,7 @@
             h2{
                 font-size: 3rem;
                 color: $blue_prosper_color;
-                margin-bottom: 5rem;
+                margin-bottom: 2rem;
             }
             p{
                 font-size: 2.2rem;
