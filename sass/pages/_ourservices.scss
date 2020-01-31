@@ -5,6 +5,7 @@
             padding: 0;
         }
         &-wrapper{
+            margin-bottom: 8rem;
             @include respond(phone){
                 padding: 0;
             }
@@ -22,26 +23,16 @@
                     color: white;
                 }
                 h2{
-                    font-size: 4rem;
-                    margin-bottom: 2rem;
-                    @include respond(phone){
-                        font-size: 24px;
-                    }
-                }
-                h3{
                     font-size: 3rem;
                     margin-bottom: 2rem;
-                    @include respond(phone){
-                        font-size: 22px;
-                    }
-
+                }
+                h3{
+                    font-size: 2rem;
+                    margin-bottom: 2rem;
                 }
                 h4{
-                    font-size: 1.8rem;
+                    font-size: 2rem;
                     margin-bottom: 1.5rem;
-                    @include respond(phone){
-                        font-size: 20px;
-                    }
                 }
                 ul{
                     padding-left: 50px;
@@ -64,9 +55,6 @@
                             padding-left: 35px;
                             li{
                                 margin-bottom: 2rem;
-                                p{
-                                    font-size: 2.2rem;
-                                }
                                 &::before{
                                     content: "°";
                                     color: $orange_prosper_color;
@@ -109,7 +97,7 @@
             .desc{
                 padding: 4rem;
                 h3{
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                     color: $blue_prosper_color;
                     margin-bottom: 2rem;
                 }
@@ -140,9 +128,8 @@
                 color: white;
                 margin-bottom: 1rem;
             }
-            h3{
+            p{
                 color: rgba(255, 255, 255, 0.822);
-                font-size: 2.2rem;
                 font-weight: 400;
             }
         }

@@ -40,7 +40,7 @@ function footer(){
                     <li><Link href="/contact"><a>Contact</a></Link></li>
                 </ul>
                 <p>Copyright @ 2020 Prosper Kapital Ventura. All Rights Reserved.</p>
-                <p>Website developed by Dignite Studio  </p>
+                <a href="https://www.dignite.studio" target="_blank" rel="noreferrer noopener" className="dp-bl">Website developed by Dignite Studio</a>
             </div>
         </>
     )

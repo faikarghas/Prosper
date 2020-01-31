@@ -41,7 +41,7 @@ function index () {
         return (
             <React.Fragment>
                 <header className="header_home">
-                    <Container>
+                    <Container maxWidth='xl'>
                         <menu>
                             <Grid container>
                                 <Grid item xs={3}>
@@ -75,7 +75,7 @@ function index () {
                             <Container style={{position:'relative',height:'100%'}} maxWidth='xl'>
                                 <div className="offset-up">
                                     <Grid container spacing={3}>
-                                        <Grid item xs={12} lg={4}>
+                                        <Grid item xs={12} md={4} lg={4}>
                                             <div className="box_wrapper">
                                                 <div className="box_wrapper-item">
                                                     <img src="/photos/kevin-ku.jpg"/>
@@ -91,7 +91,7 @@ function index () {
                                                 </div>
                                             </div>
                                         </Grid>
-                                        <Grid item xs={12} lg={4}>
+                                        <Grid item xs={12} md={4} lg={4}>
                                             <div className="box_wrapper">
                                                 <div className="box_wrapper-item">
                                                     <img src="/photos/austin-distel.jpg"/>
@@ -107,7 +107,7 @@ function index () {
                                                 </div>
                                             </div>
                                         </Grid>
-                                        <Grid item xs={12} lg={4}>
+                                        <Grid item xs={12} md={4} lg={4}>
                                             <div className="box_wrapper">
                                                 <div className="box_wrapper-item">
                                                     <img src="/photos/markus-spiske.jpg"/>
@@ -131,7 +131,7 @@ function index () {
                             <Container maxWidth='xl'>
                                 <div className="wrapper">
                                     <Grid container>
-                                        <Grid item xs={12} lg={6} style={{display:'flex',alignItems:'center'}}>
+                                        <Grid item xs={12} md={6} lg={6} style={{display:'flex',alignItems:'center'}}>
                                             <div className="section_about_home-desc">
                                                 <h2>About Us</h2>
                                                 <p>Prosper Ventura manifested in March 2019, the era of the digital economy. Where unicorns are born and giants recede. Working together with companies and start-ups that are in the mold of potential unicorns. Ranging from retail, services, tech, and construction as their initial investments.</p>
@@ -141,7 +141,7 @@ function index () {
                                                 <Link href="/about"><a className="link_button"><Button variant="outlined" color="primary">Read More</Button></a></Link>
                                             </div>
                                         </Grid>
-                                        <Grid item xs={12} lg={6}>
+                                        <Grid item xs={12} md={6} lg={6}>
                                         <div className="section_about_home-photo">
                                             <img src="/photos/nik-macmillan.jpg" width="100%"/>
                                         </div>
@@ -160,22 +160,22 @@ function index () {
                                                 <p>We value the partnerships we have built over the years. View <br/> some of the partners that we work with:</p>
                                             </div>
                                         </Grid>
-                                        <Grid item xs={6} lg={4} className="dp-center box_img">
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
                                             <img className="img_partner" src="/images/gkinvest.png" width="180px" alt="gkinvest-logo"/>
                                         </Grid>
-                                        <Grid item xs={6} lg={4} className="dp-center box_img">
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
                                             <img className="img_partner" src="/images/NorthCliff.png" width="180px" alt="NorthCliff-logo"/>
                                         </Grid>
-                                        <Grid item xs={6} lg={4} className="dp-center box_img">
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
                                             <img className="img_partner" src="/images/spotless.png" width="180px" alt="spotless-logo"/>
                                         </Grid>
-                                        <Grid item xs={6} lg={4} className="dp-center box_img">
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
                                             <img className="img_partner" src="/images/TSM.png" width="180px" alt="TSM-logo"/>
                                         </Grid>
-                                        <Grid item xs={6} lg={4} className="dp-center box_img">
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
                                             <img className="img_partner" src="/images/CollabstoreJKT.png" width="180px" alt="CollabstoreJKT-logo"/>
                                         </Grid>
-                                        <Grid item xs={6} lg={4} className="dp-center box_img">
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
                                             <img className="img_partner" src="/images/SDT.png" width="180px" alt="SDT-logo"/>
                                         </Grid>
                                     </Grid>

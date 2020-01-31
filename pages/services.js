@@ -20,7 +20,7 @@ function Services () {
     return (
         <React.Fragment>
             <header className="header_services">
-                <Container>
+                <Container maxWidth='xl'>
                     <menu>
                         <Grid container>
                             <Grid item xs={3}>
@@ -91,7 +91,7 @@ function Services () {
                                             Client: CV Karya Wida Prakasa. 22 December 2018 – 2 January 2019
                                             <br/>
                                             <br/>
-                                            Project details include the financing of essential construction materials for the development in cross-region infrastructural projects in collaboration with local
+                                            Project details include the financing of essential construction materials for the development in cross-region infrastructural projects in collaboration with local goverments involved.
                                             </li>
                                             <li>
                                             <p>Project Tol Serpong Cinere</p>
@@ -172,7 +172,7 @@ function Services () {
                                 </ul>
                             </div>
                         </div>
-                        <div className="section_product_services-wrapper" id="fixed-rate-notes">
+                        <div className="section_product_services-wrapper" id="fixes-rate-notes">
                             <div className="img">
                                 <img src="/photos/markus-spiske.jpg" width="100%" height="100%"/>
                             </div>
@@ -244,7 +244,7 @@ function Services () {
                             <Grid item xs={12}>
                                 <div className="section_upload_services-title">
                                     <h2>Submit Your Documents</h2>
-                                    <h3>Upload files in .pdf format in the boxes below.</h3>
+                                    <p>Upload files in .pdf format in the boxes below.</p>
                                 </div>
                             </Grid>
                             <Grid item xs={12} md={4}>

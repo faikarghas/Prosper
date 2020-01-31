@@ -5,7 +5,7 @@
 
         &-title{
             h1{
-                font-size: 5rem;
+                font-size: 4rem;
                 font-weight: 700;
                 color: $blue_prosper_color;
             }
@@ -36,7 +36,7 @@
                 padding: 4rem;
             }
             h2{
-                font-size: 5rem;
+                font-size: 3rem;
                 color: white;
                 margin-bottom: 3.5rem;
             }
@@ -79,8 +79,8 @@
             @include respond(phone){
                 margin-bottom: 4rem;
             }
-            h3{
-                font-size: 4rem;
+            h2{
+                font-size: 3rem;
                 color: $blue_prosper_color;
                 margin-bottom: 5rem;
             }
@@ -131,7 +131,7 @@
             justify-content: center;
             padding: 4rem;
             h4{
-                font-size: 2.5rem;
+                font-size: 2rem;
                 color: white;
                 margin-right: 3rem;
             }
@@ -149,9 +149,9 @@
 
         &-content{
             padding: 10rem 0;
-            h3{
+            h2{
                 color: $blue_prosper_color;
-                font-size: 4rem;
+                font-size: 3rem;
                 text-align: center;
             }
             &--slider{

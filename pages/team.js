@@ -7,7 +7,7 @@ function Team () {
     return (
         <React.Fragment>
             <header className="header_team">
-                <Container>
+                <Container maxWidth='xl'>
                     <menu>
                         <Grid container>
                             <Grid item xs={3}>
@@ -57,7 +57,7 @@ function Team () {
                         </div>
                     </Container>
                 </section>
-                <Container> <div className="divider"></div></Container>
+                <div className="divider"><Container maxWidth="xl"><div className="bg"></div></Container></div>
                 <section className="section_founder_team">
                     <Container maxWidth="xl">
                         <Grid container>

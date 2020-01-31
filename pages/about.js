@@ -44,7 +44,7 @@ function About ({deviceType}) {
     return (
         <React.Fragment>
             <div className="header_about">
-                <Container>
+                <Container maxWidth='xl'>
                     <menu>
                         <Grid container>
                             <Grid item xs={3}>
@@ -138,7 +138,7 @@ function About ({deviceType}) {
                         <Grid container >
                             <Grid item xs={12}>
                                 <div className="section_why_about-title">
-                                    <h3>Why Us</h3>
+                                    <h2>Why Us</h2>
                                     <p>"Only the knowledgeable tread new territories, and<br/> through the unfamiliar they are rewarded."</p>
                                 </div>
                             </Grid>
@@ -174,7 +174,7 @@ function About ({deviceType}) {
                     <Grid container>
                         <Grid item xs={12}>
                             <div className="section_say_about-content">
-                                <h3>What They Say</h3>
+                                <h2>What They Say</h2>
                                 <div className="section_say_about-content--slider">
                                     <Slider {...settings}>
                                         <div className="section_say_about-content--slider-item" style={{width:'800px'}}>

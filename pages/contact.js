@@ -44,7 +44,14 @@ function Contact () {
             fetch('https://api.prosperventura.com/api/postform',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
-                body:JSON.stringify({data})
+                body:JSON.stringify({
+                    firstname: values.firstname,
+                    lastname: values.lastname,
+                    companyname: values.companyname,
+                    email: values.email,
+                    phonenumber: values.phonenumber,
+                    message: values.message,
+                })
             }).then((data)=>{
                 console.log(data);
                 resetForm()
@@ -57,7 +64,7 @@ function Contact () {
     return (
         <React.Fragment>
             <header className="header_contact">
-                <Container>
+                <Container maxWidth='xl'>
                     <menu>
                         <Grid container>
                             <Grid item xs={3}>
@@ -205,7 +212,7 @@ function Contact () {
                         </Grid>
                     </Container>
                 </section>
-                <Container> <div className="divider"></div></Container>
+                <div className="divider"><Container maxWidth='xl'><div className="bg"></div></Container></div>
                 <section className="section_location_contact">
                     <Container maxWidth="xl">
                         <Grid container>

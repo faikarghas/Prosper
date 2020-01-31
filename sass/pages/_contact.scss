@@ -1,16 +1,10 @@
 .section_infoandform_contact{
-    padding: 10rem 4rem;
+    padding:4rem;
     .title{
         padding-bottom: 10rem;
         text-align: center;
         @include respond(phone){
             padding: 4rem;
-        }
-        p{
-            font-size: 2.2rem;
-            @include respond(phone){
-                font-size: 3.2rem;
-            }
         }
     }
     .prosper_info{

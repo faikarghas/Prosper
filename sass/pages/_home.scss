@@ -1,8 +1,5 @@
 .home{
     .section_products_home{
-        max-height: 35rem;
-        min-height: 30rem;
-        height: 30rem;
         @include respond(phone){
             padding: 3rem 0;
             max-height: unset;
@@ -12,6 +9,9 @@
         }
         .offset-up{
             transform: translateY(-20%);
+            @include respond(tab-port){
+                transform: translateY(0);
+            }
         }
         .box_wrapper{
             height: 30rem;
@@ -117,9 +117,6 @@
 
     .section_about_home{
         padding: 4rem 0 4rem 4rem;
-        @include respond(med-desktop){
-            margin-top: 34vh;
-        }
         @media (min-width: 960px){
             .MuiContainer-root {
                 padding-left: 32px;
@@ -128,12 +125,6 @@
         }
         @include respond(tab-port){
             padding: 7rem 0;
-            margin-top: 30vh;
-        }
-        @include respond(phone){
-            margin-top: 0;
-            max-width: unset;
-            width: unset;
         }
         &-desc{
             width: 80%;
@@ -153,6 +144,9 @@
             img{
                 max-height: 40rem;
                 height: 40rem;
+            }
+            @include respond(tab-port){
+                margin-top: 4rem;
             }
         }
     }
@@ -265,11 +259,9 @@ footer{
         li{
             list-style: none;
             display: inline-block;
-            // margin: 0 2rem;
-            margin-right: 2rem;
                 &:not(:last-child){
                     &::after{
-                        padding-left: 2rem;
+                        padding: 2rem;
                         content: '|';
                         color: white;
                     }
@@ -281,10 +273,15 @@ footer{
             }
         }
     }
-    p{
+    a,p{
+        text-decoration: none;
         font-size: 1.6rem;
         color: white;
         text-align: center;
         margin-bottom: 1rem;
+    }
+    .dp-bl{
+        display: block;
+        margin: 0;
     }
 }
