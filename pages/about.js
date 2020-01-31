@@ -163,7 +163,7 @@ function About ({deviceType}) {
                         <Grid item xs={12}>
                             <div className="download">
                                 <h4>Download our company profile.</h4>
-                                <a className="link_button" href="/pdf/compro-prosper.pdf" download><Button variant="outlined" color="primary">Download</Button></a>
+                                <a className="link_button" href="/pdf/Company Profile - Prosper Kapital Ventura.pdf" download><Button variant="outlined" color="primary">Download</Button></a>
                             </div>
                         </Grid>
                     </Grid>
