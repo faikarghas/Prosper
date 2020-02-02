@@ -52,6 +52,8 @@ export default class MyDocument extends Document {
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
 
                     {/* OPEN GRAP */}
+                    <meta name="keywords" content="prosperventura, prosper ventura, prosper,asset management, capital fundraising, fixed rate notes
+" />
                     <meta name="description" content="Together to a Better Tommorow"/>
                     <meta name="og:description" content="Together to a Better Tommorow"/>
                     <meta name="author" content="Prosper Ventura"/>

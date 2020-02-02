@@ -1,8 +1,7 @@
 import React, { Component, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Container,Grid,Button,GridListTile,Typography  } from '@material-ui/core'
+import { Container,Grid,Button  } from '@material-ui/core'
 import Avatar from '@material-ui/core/Avatar';
-import { motion, useViewportScroll, useTransform } from "framer-motion"
 import Slider from 'react-slick'
 import Footer from '../components/footer'
 
@@ -43,7 +42,7 @@ const settings = {
 function About ({deviceType}) {
     return (
         <React.Fragment>
-            <div className="header_about">
+            <header className="header_about">
                 <Container maxWidth='xl'>
                     <menu>
                         <Grid container>
@@ -61,7 +60,7 @@ function About ({deviceType}) {
                         </Grid>
                     </menu>
                 </Container>
-            </div>
+            </header>
             <main className="about">
                 <section className="section_about_about">
                     <Container maxWidth="xl">
