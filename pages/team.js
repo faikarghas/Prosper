@@ -1,6 +1,8 @@
 import React, { Component, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Container,Grid,Button,GridListTile,Typography, Divider  } from '@material-ui/core'
+
+import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
 
 function Team () {
@@ -23,6 +25,7 @@ function Team () {
                             </Grid>
                         </Grid>
                     </menu>
+                    <MenuMobile/>
                     <div className="header_text-team">
                         <h1>World-class Investing Team <br/>in Indonesia Since 2019</h1>
                         <p>Armed with a like-minded team of professionals, utilizing strong <br/>networks to collaborate in tapping unseen opportunities, and a valuable<br/> backbone in research and data-driven investment strategies.</p>

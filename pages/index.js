@@ -2,8 +2,8 @@ import React, { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Container,Grid,Button } from '@material-ui/core'
 import { motion, useViewportScroll } from "framer-motion";
-import Footer from '../components/footer'
 import MenuMobile from '../components/menu_mobile';
+import Footer from '../components/footer'
 
 const useScroll = () => {
     const htmlElRef = useRef(null)

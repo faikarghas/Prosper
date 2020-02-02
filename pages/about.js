@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Container,Grid,Button  } from '@material-ui/core'
 import Avatar from '@material-ui/core/Avatar';
 import Slider from 'react-slick'
+import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
 
 const settings = {
@@ -59,6 +60,7 @@ function About ({deviceType}) {
                             </Grid>
                         </Grid>
                     </menu>
+                    <MenuMobile/>
                 </Container>
             </header>
             <main className="about">

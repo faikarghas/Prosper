@@ -5,6 +5,7 @@ import { Container,Grid,Button,GridListTile,Typography, Divider,CircularProgress
 import {useFormik } from 'formik'
 import * as Yup from 'yup';
 
+import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
 
 
@@ -80,6 +81,7 @@ function Contact () {
                             </Grid>
                         </Grid>
                     </menu>
+                    <MenuMobile/>
                     <div className="header_text-team">
                         <h1>Contact Us</h1>
                     </div>

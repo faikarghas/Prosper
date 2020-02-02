@@ -48,7 +48,8 @@
                             position: absolute;
                             left: -50px;
                             @include respond(phone){
-                                content: "";
+                                left: -26px;
+                                font-size: 3.2rem;
                             }
                         }
                         ul{
@@ -62,7 +63,8 @@
                                     left: -35px;
                                     font-size: 2.2rem;
                                     @include respond(phone){
-                                        content: "";
+                                        left: -26px;
+                                        font-size: 5.2rem;
                                     }
                                 }
                             }

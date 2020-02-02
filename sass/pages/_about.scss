@@ -1,5 +1,8 @@
 
 .about{
+    @include respond(phone){
+        margin-top: 15rem;
+    }
     .section_about_about{
         padding: 4rem;
 
@@ -50,6 +53,9 @@
                         color: #f15d2a;
                         position: absolute;
                         left: 40px;
+                        @include respond(phone){
+                            left: 23px;
+                        }
                     }
                 }
             }

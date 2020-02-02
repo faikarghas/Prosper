@@ -105,6 +105,9 @@ header{
     position: relative;
     box-shadow: 2px 8px 18px -9px #e2e2e2;
     padding: 0 4rem;
+    @include respond(phone){
+        max-height: 0;
+    }
     menu{
         img{
             width: 20rem;

@@ -4,8 +4,9 @@ import { Container,Grid,Button,GridListTile,Typography, Divider  } from '@materi
 import { FilePond, registerPlugin } from 'react-filepond';
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
-
+import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
+import "filepond/dist/filepond.min.css";
 
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview)
 
@@ -36,6 +37,7 @@ function Services () {
                             </Grid>
                         </Grid>
                     </menu>
+                    <MenuMobile/>
                     <div className="header_text">
                         <h1>What We Do <br/> to Keep Your Prosperity</h1>
                         <p>The main foundation of Prosper Ventura’s portfolio remains a<br/> solid track-record in the foreign exchange market, youthful<br/> startups, and promising projects.</p>
