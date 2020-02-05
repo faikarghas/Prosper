@@ -1,13 +1,14 @@
 import React, { Component, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Container,Grid,Button,GridListTile,Typography, Divider  } from '@material-ui/core'
-
 import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
+import Ga from '../components/layout/ga'
 
 function Team () {
     return (
         <React.Fragment>
+            <Ga>
             <header className="header_team">
                 <Container maxWidth='xl'>
                     <menu>
@@ -120,6 +121,7 @@ function Team () {
                 </section>
             </main>
             <Footer/>
+            </Ga>
         </React.Fragment>
     )
 }

@@ -4,6 +4,7 @@ import { Container,Grid,Button } from '@material-ui/core'
 import { motion, useViewportScroll } from "framer-motion";
 import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
+import Ga from '../components/layout/ga'
 
 const useScroll = () => {
     const htmlElRef = useRef(null)
@@ -40,168 +41,170 @@ function index () {
       });
         return (
             <React.Fragment>
-                <header className="header_home">
-                    <Container maxWidth='xl'>
-                        <menu>
-                            <Grid container>
-                                <Grid item xs={3}>
-                                    <img src="/images/logo-prosper-putih.png" />
-                                </Grid>
-                                <Grid item xs={9} className="list_menu">
-                                    <ul>
-                                        <li><Link href="/about"><a>About</a></Link></li>
-                                        <li><Link href="/team"><a>Our Team</a></Link></li>
-                                        <li><Link href="/services"><a>Our Services</a></Link></li>
-                                        <li><Link href="/contact"><a>Contact</a></Link></li>
-                                    </ul>
-                                </Grid>
-                            </Grid>
-                        </menu>
-                        <MenuMobile/>
-                        <motion.div className="header_text">
-                            <h1>Together to <br/> a Better Tommorow</h1>
-                            <p>With experience at the helm, and innovation as the <br/>engine.</p>
-                            <br/>
-                            <br/>
-                        </motion.div>
-                        <div className="explore" onClick={executeScroll}>
-                            <p>explore now</p>
-                            <img src="/images/dropdown-arrow-white.png" />
-                        </div>
-                    </Container>
-                </header>
-                <main className="home">
-                    <section id="products" ref={elementToScrollRef} className="section_products_home">
-                        <Container style={{position:'relative',height:'100%'}} maxWidth='xl'>
-                            <div className="offset-up">
-                                <Grid container spacing={3}>
-                                    <Grid item xs={12} md={4} lg={4}>
-                                        <div className="box_wrapper">
-                                            <div className="box_wrapper-item">
-                                                <img src="/photos/kevin-ku.jpg"/>
-                                                <div className="overlay"></div>
-                                                <div className="desc">
-                                                    <h3>Asset Management</h3>
-                                                    <br/>
-                                                    <p>Our dedicated team of analysts and traders collaborate under consumer directives in managing the growth of allocated client equity.</p>
-                                                    <br/>
-                                                    <br/>
-                                                    <Link href="/services#assets-management"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
-                                                </div>
-                                            </div>
-                                        </div>
+                <Ga>
+                    <header className="header_home">
+                        <Container maxWidth='xl'>
+                            <menu>
+                                <Grid container>
+                                    <Grid item xs={3}>
+                                        <img src="/images/logo-prosper-putih.png" />
                                     </Grid>
-                                    <Grid item xs={12} md={4} lg={4}>
-                                        <div className="box_wrapper">
-                                            <div className="box_wrapper-item">
-                                                <img src="/photos/austin-distel.jpg"/>
-                                                <div className="overlay"></div>
-                                                <div className="desc">
-                                                    <h3>Capital Fundraising</h3>
-                                                    <br/>
-                                                    <p>Connect new promising ventures in early-stage enterprise with the appropriate source of capital from experienced clients.</p>
-                                                    <br/>
-                                                    <br/>
-                                                    <Link href="/services#capital-fundraising"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Grid>
-                                    <Grid item xs={12} md={4} lg={4}>
-                                        <div className="box_wrapper">
-                                            <div className="box_wrapper-item">
-                                                <img src="/photos/markus-spiske.jpg"/>
-                                                <div className="overlay"></div>
-                                                <div className="desc">
-                                                    <h3>Fixed Rate Notes</h3>
-                                                    <br/>
-                                                    <p>Provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually.</p>
-                                                    <br/>
-                                                    <br/>
-                                                    <Link href="/services#fixes-rate-notes"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <Grid item xs={9} className="list_menu">
+                                        <ul>
+                                            <li><Link href="/about"><a>About</a></Link></li>
+                                            <li><Link href="/team"><a>Our Team</a></Link></li>
+                                            <li><Link href="/services"><a>Our Services</a></Link></li>
+                                            <li><Link href="/contact"><a>Contact</a></Link></li>
+                                        </ul>
                                     </Grid>
                                 </Grid>
+                            </menu>
+                            <MenuMobile/>
+                            <motion.div className="header_text">
+                                <h1>Together to <br/> a Better Tommorow</h1>
+                                <p>With experience at the helm, and innovation as the <br/>engine.</p>
+                                <br/>
+                                <br/>
+                            </motion.div>
+                            <div className="explore" onClick={executeScroll}>
+                                <p>explore now</p>
+                                <img src="/images/dropdown-arrow-white.png" />
                             </div>
                         </Container>
-                    </section>
-                    <section className="section_about_home">
-                        <Container maxWidth='xl'>
-                            <div className="wrapper">
-                                <Grid container>
-                                    <Grid item xs={12} md={6} lg={6} style={{display:'flex',alignItems:'center'}}>
-                                        <div className="section_about_home-desc">
-                                            <h2>About Us</h2>
-                                            <p>Prosper Ventura manifested in March 2019, the era of the digital economy. Where unicorns are born and giants recede. Working together with companies and start-ups that are in the mold of potential unicorns. Ranging from retail, services, tech, and construction as their initial investments.</p>
-                                            <br/>
-                                            <br/>
-                                            <br/>
-                                            <Link href="/about"><a className="link_button"><Button variant="outlined" color="primary">Read More</Button></a></Link>
+                    </header>
+                    <main className="home">
+                        <section id="products" ref={elementToScrollRef} className="section_products_home">
+                            <Container style={{position:'relative',height:'100%'}} maxWidth='xl'>
+                                <div className="offset-up">
+                                    <Grid container spacing={3}>
+                                        <Grid item xs={12} md={4} lg={4}>
+                                            <div className="box_wrapper">
+                                                <div className="box_wrapper-item">
+                                                    <img src="/photos/kevin-ku.jpg"/>
+                                                    <div className="overlay"></div>
+                                                    <div className="desc">
+                                                        <h3>Asset Management</h3>
+                                                        <br/>
+                                                        <p>Our dedicated team of analysts and traders collaborate under consumer directives in managing the growth of allocated client equity.</p>
+                                                        <br/>
+                                                        <br/>
+                                                        <Link href="/services#assets-management"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Grid>
+                                        <Grid item xs={12} md={4} lg={4}>
+                                            <div className="box_wrapper">
+                                                <div className="box_wrapper-item">
+                                                    <img src="/photos/austin-distel.jpg"/>
+                                                    <div className="overlay"></div>
+                                                    <div className="desc">
+                                                        <h3>Capital Fundraising</h3>
+                                                        <br/>
+                                                        <p>Connect new promising ventures in early-stage enterprise with the appropriate source of capital from experienced clients.</p>
+                                                        <br/>
+                                                        <br/>
+                                                        <Link href="/services#capital-fundraising"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Grid>
+                                        <Grid item xs={12} md={4} lg={4}>
+                                            <div className="box_wrapper">
+                                                <div className="box_wrapper-item">
+                                                    <img src="/photos/markus-spiske.jpg"/>
+                                                    <div className="overlay"></div>
+                                                    <div className="desc">
+                                                        <h3>Fixed Rate Notes</h3>
+                                                        <br/>
+                                                        <p>Provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually.</p>
+                                                        <br/>
+                                                        <br/>
+                                                        <Link href="/services#fixes-rate-notes"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Grid>
+                                    </Grid>
+                                </div>
+                            </Container>
+                        </section>
+                        <section className="section_about_home">
+                            <Container maxWidth='xl'>
+                                <div className="wrapper">
+                                    <Grid container>
+                                        <Grid item xs={12} md={6} lg={6} style={{display:'flex',alignItems:'center'}}>
+                                            <div className="section_about_home-desc">
+                                                <h2>About Us</h2>
+                                                <p>Prosper Ventura manifested in March 2019, the era of the digital economy. Where unicorns are born and giants recede. Working together with companies and start-ups that are in the mold of potential unicorns. Ranging from retail, services, tech, and construction as their initial investments.</p>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <Link href="/about"><a className="link_button"><Button variant="outlined" color="primary">Read More</Button></a></Link>
+                                            </div>
+                                        </Grid>
+                                        <Grid item xs={12} md={6} lg={6}>
+                                        <div className="section_about_home-photo">
+                                            <img src="/photos/nik-macmillan.jpg" width="100%"/>
                                         </div>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item xs={12} md={6} lg={6}>
-                                    <div className="section_about_home-photo">
-                                        <img src="/photos/nik-macmillan.jpg" width="100%"/>
-                                    </div>
+                                </div>
+                            </Container>
+                        </section>
+                        <section className="section_partners_home">
+                            <Container maxWidth='xl'>
+                                <div className="wrapper">
+                                    <Grid container>
+                                        <Grid item xs={12} lg={12} className="">
+                                            <div className="title">
+                                                <h2>Our Partners</h2>
+                                                <p>We value the partnerships we have built over the years. View <br/> some of the partners that we work with:</p>
+                                            </div>
+                                        </Grid>
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
+                                            <img className="img_partner" src="/images/gkinvest.png" width="180px" alt="gkinvest-logo"/>
+                                        </Grid>
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
+                                            <img className="img_partner" src="/images/NorthCliff.png" width="180px" alt="NorthCliff-logo"/>
+                                        </Grid>
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
+                                            <img className="img_partner" src="/images/spotless.png" width="180px" alt="spotless-logo"/>
+                                        </Grid>
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
+                                            <img className="img_partner" src="/images/TSM.png" width="180px" alt="TSM-logo"/>
+                                        </Grid>
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
+                                            <img className="img_partner" src="/images/CollabstoreJKT.png" width="180px" alt="CollabstoreJKT-logo"/>
+                                        </Grid>
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
+                                            <img className="img_partner" src="/images/SDT.png" width="180px" alt="SDT-logo"/>
+                                        </Grid>
                                     </Grid>
-                                </Grid>
-                            </div>
-                        </Container>
-                    </section>
-                    <section className="section_partners_home">
-                        <Container maxWidth='xl'>
-                            <div className="wrapper">
+                                </div>
+                            </Container>
+                        </section>
+                        <section className="section_find_home">
+                            <Container maxWidth='xl'>
                                 <Grid container>
-                                    <Grid item xs={12} lg={12} className="">
+                                    <Grid item xs={12}>
                                         <div className="title">
-                                            <h2>Our Partners</h2>
-                                            <p>We value the partnerships we have built over the years. View <br/> some of the partners that we work with:</p>
+                                            <h2>Find Your Best Investment</h2>
+                                            <p>Our services cover investments in a while range of <br/> global, regional and country specific strategies.</p>
+                                            <div className="dp-center">
+                                                <Link href="/services#upload"><a className="link_button"><Button variant="outlined" color="primary">Get Started</Button></a></Link>
+                                            </div>
                                         </div>
                                     </Grid>
-                                    <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
-                                        <img className="img_partner" src="/images/gkinvest.png" width="180px" alt="gkinvest-logo"/>
-                                    </Grid>
-                                    <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
-                                        <img className="img_partner" src="/images/NorthCliff.png" width="180px" alt="NorthCliff-logo"/>
-                                    </Grid>
-                                    <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
-                                        <img className="img_partner" src="/images/spotless.png" width="180px" alt="spotless-logo"/>
-                                    </Grid>
-                                    <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
-                                        <img className="img_partner" src="/images/TSM.png" width="180px" alt="TSM-logo"/>
-                                    </Grid>
-                                    <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
-                                        <img className="img_partner" src="/images/CollabstoreJKT.png" width="180px" alt="CollabstoreJKT-logo"/>
-                                    </Grid>
-                                    <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
-                                        <img className="img_partner" src="/images/SDT.png" width="180px" alt="SDT-logo"/>
-                                    </Grid>
                                 </Grid>
-                            </div>
-                        </Container>
-                    </section>
-                    <section className="section_find_home">
-                        <Container maxWidth='xl'>
-                            <Grid container>
-                                <Grid item xs={12}>
-                                    <div className="title">
-                                        <h2>Find Your Best Investment</h2>
-                                        <p>Our services cover investments in a while range of <br/> global, regional and country specific strategies.</p>
-                                        <div className="dp-center">
-                                            <Link href="/services#upload"><a className="link_button"><Button variant="outlined" color="primary">Get Started</Button></a></Link>
-                                        </div>
-                                    </div>
-                                </Grid>
-                            </Grid>
-                        </Container>
-                    </section>
-                    <section className="section_img_home">
-                        <img src="/photos/gunung.png" width="100%"/>
-                    </section>
-                </main>
-                <Footer />
+                            </Container>
+                        </section>
+                        <section className="section_img_home">
+                            <img src="/photos/gunung.png" width="100%"/>
+                        </section>
+                    </main>
+                    <Footer />
+                </Ga>
             </React.Fragment>
         )
 }

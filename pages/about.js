@@ -5,6 +5,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Slider from 'react-slick'
 import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
+import Ga from '../components/layout/ga'
 
 const settings = {
     className: "slider variable-width",
@@ -43,6 +44,7 @@ const settings = {
 function About ({deviceType}) {
     return (
         <React.Fragment>
+            <Ga>
             <header className="header_about">
                 <Container maxWidth='xl'>
                     <menu>
@@ -211,6 +213,7 @@ function About ({deviceType}) {
                 </section>
             </main>
             <Footer/>
+            </Ga>
         </React.Fragment>
     )
 }

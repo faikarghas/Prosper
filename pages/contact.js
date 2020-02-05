@@ -1,12 +1,11 @@
 import React, { Component, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Container,Grid,Button,GridListTile,Typography, Divider,CircularProgress,TextField  } from '@material-ui/core'
-
 import {useFormik } from 'formik'
 import * as Yup from 'yup';
-
 import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
+import Ga from '../components/layout/ga'
 
 
 function Contact () {
@@ -64,6 +63,7 @@ function Contact () {
 
     return (
         <React.Fragment>
+            <Ga>
             <header className="header_contact">
                 <Container maxWidth='xl'>
                     <menu>
@@ -226,6 +226,7 @@ function Contact () {
                 </section>
             </main>
             <Footer/>
+            </Ga>
         </React.Fragment>
     )
 }

@@ -1,12 +1,13 @@
 import React, { Component, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Container,Grid,Button,GridListTile,Typography, Divider  } from '@material-ui/core'
+import { Container,Grid,Button  } from '@material-ui/core'
 import { FilePond, registerPlugin } from 'react-filepond';
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
 import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
 import "filepond/dist/filepond.min.css";
+import Ga from '../components/layout/ga'
 
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview)
 
@@ -20,6 +21,7 @@ function Services () {
     }
     return (
         <React.Fragment>
+            <Ga>
             <header className="header_services">
                 <Container maxWidth='xl'>
                     <menu>
@@ -338,6 +340,7 @@ function Services () {
                 </section>
             </main>
             <Footer/>
+            </Ga>
         </React.Fragment>
     )
 }
