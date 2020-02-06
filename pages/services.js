@@ -182,10 +182,11 @@ function Services () {
                             </div>
                             <div className="desc">
                                 <h2>Fixed Rate Notes</h2>
-                                <p>In the current market, we provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually. Utilizing strategic investments with high quality ratings within our extensive partner network, we promise a streamlined and efficient option in the current dynamic economic landscape</p>
-                                <br/>
-                                <br/>
-                                <p>Details and duration are available for discussion with our account team.</p>
+                                <p>Coming Soon</p>
+                                {/* <p>In the current market, we provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually. Utilizing strategic investments with high quality ratings within our extensive partner network, we promise a streamlined and efficient option in the current dynamic economic landscape</p> */}
+                                {/* <br/> */}
+                                {/* <br/> */}
+                                {/* <p>Details and duration are available for discussion with our account team.</p> */}
                             </div>
                         </div>
                     </Container>

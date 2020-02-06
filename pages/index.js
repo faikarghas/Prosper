@@ -117,7 +117,8 @@ function index () {
                                                     <div className="desc">
                                                         <h3>Fixed Rate Notes</h3>
                                                         <br/>
-                                                        <p>Provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually.</p>
+                                                        <p>Coming Soon</p>
+                                                        {/* <p>Provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually.</p> */}
                                                         <br/>
                                                         <br/>
                                                         <Link href="/services#fixes-rate-notes"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
