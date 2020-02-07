@@ -17,7 +17,7 @@ function footer(){
                                 Jakarta Timur, DKI Jakarta 13460</p>
                                 <br/>
                                 <p>contact@prosperventura.com</p>
-                                <p>021 22081342</p>
+                                <p>021 2208 1099</p>
                             </div>
                         </Grid>
                         <Grid item xs={6} md={6}>

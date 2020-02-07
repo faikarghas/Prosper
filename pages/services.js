@@ -176,19 +176,19 @@ function Services () {
                                 </ul>
                             </div>
                         </div>
-                        <div className="section_product_services-wrapper" id="fixes-rate-notes">
+                        {/* <div className="section_product_services-wrapper" id="fixes-rate-notes">
                             <div className="img">
                                 <img src="/photos/markus-spiske.jpg" width="100%" height="100%"/>
                             </div>
                             <div className="desc">
                                 <h2>Fixed Rate Notes</h2>
                                 <p>Coming Soon</p>
-                                {/* <p>In the current market, we provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually. Utilizing strategic investments with high quality ratings within our extensive partner network, we promise a streamlined and efficient option in the current dynamic economic landscape</p> */}
-                                {/* <br/> */}
-                                {/* <br/> */}
-                                {/* <p>Details and duration are available for discussion with our account team.</p> */}
+                                <p>In the current market, we provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually. Utilizing strategic investments with high quality ratings within our extensive partner network, we promise a streamlined and efficient option in the current dynamic economic landscape</p>
+                                <br/>
+                                <br/>
+                                <p>Details and duration are available for discussion with our account team.</p>
                             </div>
-                        </div>
+                        </div> */}
                     </Container>
                 </section>
                 <section className="section_how_services">

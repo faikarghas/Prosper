@@ -77,7 +77,7 @@ function index () {
                             <Container style={{position:'relative',height:'100%'}} maxWidth='xl'>
                                 <div className="offset-up">
                                     <Grid container spacing={3}>
-                                        <Grid item xs={12} md={4} lg={4}>
+                                        <Grid item xs={12} md={6} lg={6}>
                                             <div className="box_wrapper">
                                                 <div className="box_wrapper-item">
                                                     <img src="/photos/kevin-ku.jpg"/>
@@ -93,7 +93,7 @@ function index () {
                                                 </div>
                                             </div>
                                         </Grid>
-                                        <Grid item xs={12} md={4} lg={4}>
+                                        <Grid item xs={12} md={6} lg={6}>
                                             <div className="box_wrapper">
                                                 <div className="box_wrapper-item">
                                                     <img src="/photos/austin-distel.jpg"/>
@@ -109,7 +109,7 @@ function index () {
                                                 </div>
                                             </div>
                                         </Grid>
-                                        <Grid item xs={12} md={4} lg={4}>
+                                        {/* <Grid item xs={12} md={4} lg={4}>
                                             <div className="box_wrapper">
                                                 <div className="box_wrapper-item">
                                                     <img src="/photos/markus-spiske.jpg"/>
@@ -118,14 +118,14 @@ function index () {
                                                         <h3>Fixed Rate Notes</h3>
                                                         <br/>
                                                         <p>Coming Soon</p>
-                                                        {/* <p>Provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually.</p> */}
+                                                        <p>Provide a long term investment service to expand your portfolio in the form of fixed returns of 12.5% annually.</p>
                                                         <br/>
                                                         <br/>
                                                         <Link href="/services#fixes-rate-notes"><a><Button variant="outlined" color="primary">Learn More</Button></a></Link>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </Grid>
+                                        </Grid> */}
                                     </Grid>
                                 </div>
                             </Container>

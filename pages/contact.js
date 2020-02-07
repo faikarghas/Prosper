@@ -106,7 +106,7 @@ function Contact () {
                                     <br/>
                                     <br/>
                                     <p><span>E</span>contact@prosperventura.com</p>
-                                    <p><span>P</span>021 22081342</p>
+                                    <p><span>P</span>021 2208 1099</p>
                                 </div>
                             </Grid>
                             <Grid item xs={12} md={6}>
