@@ -1,24 +1,47 @@
-import React, { Component, useRef, useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Container,Grid,Button  } from '@material-ui/core'
-import { FilePond, registerPlugin } from 'react-filepond';
-import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation'
-import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
+import React, { useRef, useState, createRef } from 'react';
+import Link from 'next/link';
+import { Container,Grid,Button  } from '@material-ui/core';
 import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
-import "filepond/dist/filepond.min.css";
-import Ga from '../components/layout/ga'
+import Ga from '../components/layout/ga';
+import DropzoneUpload from '../components/drozone'
+import { useStore } from "../lib/store";
 
-registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview)
-
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 function Services () {
-    const [file,setFile] = useState()
-    const pond = useRef()
+    const {state, dispatch} = useStore();
+    const [loading, setLoading] = useState(false);
 
-    function submit(params) {
-        console.log(file,'blabla');
+    function klik(params) {
+
+        if (state.file.length > 0) {
+            setLoading(true)
+            const data = new FormData()
+            for (let i = 0; i < state.file.length; i++) {
+                data.append('file', state.file[i])
+            }
+
+            console.log(data);
+
+            fetch('https://api.prosperventura.com/api/upload',{
+                method:'POST',
+                body:data
+            }).then(res=>{
+                console.log('resp',res);
+                if (res.status === 200) {
+                    window.location.reload()
+                    setLoading(false)
+                } else {
+                    setLoading(false)
+                    alert('data gagal terkirim')
+                    window.location.reload()
+                }
+            })
+        }
+
     }
+
     return (
         <React.Fragment>
             <Ga>
@@ -252,88 +275,16 @@ function Services () {
                                     <p>Upload files in .pdf format in the boxes below.</p>
                                 </div>
                             </Grid>
-                            <Grid item xs={12} md={4}>
-                                <div className="section_upload_services-upload">
-                                    <div className="title">
-                                        <h4>Company Profile</h4>
-                                    </div>
-                                    {/* upload */}
-                                    <FilePond
-                                        name={"file"}
-                                        allowMultiple={false}
-                                        maxFiles={1}
-                                        server='https://api.prosperventura.com/api/upload'
-                                    />
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <div className="section_upload_services-upload">
-                                    <div className="title">
-                                        <h4>Business Securities</h4>
-                                    </div>
-                                    {/* upload */}
-                                    <FilePond
-                                        name={"file"}
-                                        allowMultiple={false}
-                                        maxFiles={1}
-                                        server='https://api.prosperventura.com/api/upload'
-                                    />
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <div className="section_upload_services-upload">
-                                    <div className="title">
-                                        <h4>Project Executive Summary</h4>
-                                    </div>
-                                    {/* upload */}
-                                    <FilePond
-                                        name={"file"}
-                                        allowMultiple={false}
-                                        maxFiles={1}
-                                        server='https://api.prosperventura.com/api/upload'
-                                    />
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <div className="section_upload_services-upload">
-                                    <div className="title">
-                                        <h4>Surat Kredit Berdokumen dalam Negeri / Bank Garansi (Jika Ada)</h4>
-                                    </div>
-                                    {/* upload */}
-                                    <FilePond
-                                        name={"file"}
-                                        allowMultiple={false}
-                                        maxFiles={1}
-                                        server='https://api.prosperventura.com/api/upload'
-                                    />
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <div className="section_upload_services-upload">
-                                    <div className="title">
-                                        <h4>Dokumen Jaminan / Agunan (Jika Ada)</h4>
-                                    </div>
-                                    {/* upload */}
-                                    <FilePond
-                                        name={"file"}
-                                        allowMultiple={false}
-                                        maxFiles={1}
-                                        server='https://api.prosperventura.com/api/upload'
-                                    />
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} md={4}>
-                                <div className="section_upload_services-upload">
-                                    <div className="title">
-                                        <h4>Mutasi Rekening Bank (6 Bulan Terakhir)</h4>
-                                    </div>
-                                    {/* upload */}
-                                    <FilePond
-                                        name={"file"}
-                                        allowMultiple={false}
-                                        maxFiles={1}
-                                        server='https://api.prosperventura.com/api/upload'
-                                    />
+                            <DropzoneUpload title="Company Profile"/>
+                            <DropzoneUpload title="Business Securities"/>
+                            <DropzoneUpload title="Project Executive Summary"/>
+                            <DropzoneUpload title="Surat Kredit Berdokumen dalam Negeri / Bank Garansi (Jika Ada)"/>
+                            <DropzoneUpload title="Dokumen Jaminan / Agunan (Jika Ada)"/>
+                            <DropzoneUpload title="Mutasi Rekening Bank (6 Bulan Terakhir)"/>
+
+                            <Grid item xs={12}>
+                                <div className="section_upload_services-submit">
+                                    <Button onClick={klik}>{loading ? <CircularProgress /> : 'SUBMIT'}</Button>
                                 </div>
                             </Grid>
                         </Grid>

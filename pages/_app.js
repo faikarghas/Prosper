@@ -2,6 +2,7 @@ import App from 'next/app';
 import React from 'react';
 import Router from 'next/router';
 import NProgress from 'nprogress'
+import { StoreProvider } from "../lib/store";
 
 import '../sass/main.scss';
 
@@ -23,7 +24,9 @@ class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props
         return (
-                <Component {...pageProps} />
+          <StoreProvider>
+            <Component {...pageProps} />
+          </StoreProvider>
         )
     }
 }
