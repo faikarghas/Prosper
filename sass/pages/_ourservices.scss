@@ -162,6 +162,7 @@
                     width: 100%;
                     height: 100%;
                     .dropzone{
+                        position: relative;
                         width: 100%;
                         height: 100%;
                         display: flex;
@@ -186,6 +187,35 @@
                             }
                         }
 
+                        .overlay-progress{
+                            position: absolute;
+                            background-color: #22222254;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 21px;
+
+                            .progress-ring{
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                                position: absolute;
+                                &__circle{
+                                    // axis compensation
+                                    transition: stroke-dashoffset 0.35s;
+                                    transform: rotate(-90deg);
+                                    transform-origin: 50% 50%;
+                                }
+                            }
+                            .number_progress{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                color: white;
+                                font-size: 2.5rem;
+                                font-family: Lato,sans-serif;
+                            }
+                        }
 
                         .tx1{
                             font-size: 1.9rem;
@@ -225,6 +255,13 @@
                 padding: 1rem 0;
                 font-size: 1.6rem;
             }
+        }
+        .notif_submit{
+            transition: .5s all;
+            opacity: 0;
+            visibility: hidden;
+            color: white;
+            text-align: center;
         }
     }
 }

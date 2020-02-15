@@ -12,6 +12,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 function Services () {
     const {state, dispatch} = useStore();
     const [loading, setLoading] = useState(false);
+    const [hideNotif, setHideNotif] = useState({opacity:0,visibility:'hidden'});
 
     function klik(params) {
 
@@ -22,16 +23,22 @@ function Services () {
                 data.append('file', state.file[i])
             }
 
-            console.log(data);
-
             fetch('https://api.prosperventura.com/api/upload',{
                 method:'POST',
                 body:data
             }).then(res=>{
-                console.log('resp',res);
                 if (res.status === 200) {
-                    window.location.reload()
+                    setHideNotif({opacity:1,visibility:'visible'})
                     setLoading(false)
+
+                    setTimeout(() => {
+                        setHideNotif({opacity:0,visibility:'hidden'})
+                    }, 2000);
+
+                    setTimeout(() => {
+                        window.location.reload()
+                    }, 2500);
+
                 } else {
                     setLoading(false)
                     alert('data gagal terkirim')
@@ -272,7 +279,7 @@ function Services () {
                             <Grid item xs={12}>
                                 <div className="section_upload_services-title">
                                     <h2>Submit Your Documents</h2>
-                                    <p>Upload files in .pdf format in the boxes below.</p>
+                                    <p>Upload files in .pdf format in the boxes below (maximum 10 MB/file).</p>
                                 </div>
                             </Grid>
                             <DropzoneUpload title="Company Profile"/>
@@ -286,6 +293,7 @@ function Services () {
                                 <div className="section_upload_services-submit">
                                     <Button onClick={klik}>{loading ? <CircularProgress /> : 'SUBMIT'}</Button>
                                 </div>
+                                <p className="notif_submit" style={{opacity:hideNotif.opacity,visibility:hideNotif.visibility}}>Your documents have been succesfully submitted. We'l contact you shortly.</p>
                             </Grid>
                         </Grid>
                     </Container>

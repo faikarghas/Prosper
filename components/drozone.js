@@ -1,42 +1,7 @@
-import React,{useState,createRef} from 'react'
+import React,{useState,createRef,useEffect,useRef} from 'react'
 import Dropzone, {useDropzone} from 'react-dropzone';
 import {Grid} from '@material-ui/core';
 import { useStore } from "../lib/store";
-
-
-function BeforeUpload({openDialog,isDragReject,widthPr}) {
-    return (
-        <React.Fragment>
-            <img src="/images/upload.png" alt="logo upload" />
-            {isDragReject ?
-                <p><strong>PDF format only</strong></p>
-                :
-                <React.Fragment>
-                <p className="tx1">DRAG & DROP</p>
-                <p className="tx2">TO UPLOAD</p>
-                <button
-                    type="button"
-                    onClick={openDialog}
-                >
-                    OR, SELECT FILES
-                </button>
-                </React.Fragment>
-
-            }
-        </React.Fragment>
-    )
-}
-
-
-function AfterUpload({acceptedFiles,remove}) {
-    return (
-        <div>
-            <p>UPLOADED</p>
-            <button onClick={() => remove(acceptedFiles)}>remove</button>
-        </div>
-    )
-}
-
 
 
 function drozone({title}) {
@@ -46,7 +11,21 @@ function drozone({title}) {
     const [hide, setHide] = useState(1);
     const [transY, setTransY] = useState(0);
     const [colorLoaded, setColorLoaded] = useState('#ffffff00');
+    const [none, setNone] = useState('none');
+    const [progressBar, setProgressBar] = useState(0);
+    const [circumference, setCircumference] = useState(0);
+    const [hideOverlay, setHideOverlay] = useState({opacity:0,visibility:'hidden'});
 
+    const circle = useRef(null);
+
+    useEffect(() => {
+        cr()
+    })
+
+    function cr(params) {
+        var circumference = 46 * 2 * Math.PI;
+        setCircumference(circumference)
+    }
 
 
     const dropzoneRef = createRef();
@@ -58,23 +37,27 @@ function drozone({title}) {
         }
     };
 
-    function onDropFile(acceptedFiles) {
+    function onDropFile(acceptedFiles,rejectedFiles) {
 
         if (acceptedFiles.length > 0) {
             const reader = new FileReader()
             reader.onabort = () => console.log('file reading was aborted')
             reader.onerror = () => console.log('file reading has failed')
             reader.onloadstart = () => {
-                console.log('mulai');
+                setHideOverlay({opacity:1,visibility:'visible'})
             }
             reader.onprogress = function(data) {
                 if (data.lengthComputable) {
                     var progress = parseInt( ((data.loaded / data.total) * 100), 10 );
-                    console.log(progress);
+                    const offset = circumference - progress / 100 * circumference;
+                    setProgressBar(progress)
+                    circle.current.style.strokeDashoffset = offset;
                 }
             }
             reader.onloadend = function(event) {
-                console.log(acceptedFiles[0].name);
+                setTimeout(() => {
+                    setHideOverlay({opacity:0,visibility:'hidden'})
+                }, 1000);
                 dispatch({type: "increment", file:acceptedFiles[0]})
                 setLoaded(true)
                 setHide(0)
@@ -85,12 +68,22 @@ function drozone({title}) {
             reader.readAsDataURL(acceptedFiles[0])
         }
 
+        const isFileTooLarge = rejectedFiles.length > 0 && rejectedFiles[0].size > 26214400;
+
+        if (isFileTooLarge) {
+            setNone('block')
+            setTimeout(() => {
+                setNone('none')
+            }, 1500);
+        }
+
     }
 
     function remove(acceptedFiles) {
         let newState = state.file.filter(item=>{
             return item !== acceptedFiles[0]
         })
+        setProgressBar(0)
         setDropDisable(false)
         setLoaded(false)
         setHide(1)
@@ -100,6 +93,7 @@ function drozone({title}) {
     }
 
 
+
     return (
         <Grid item xs={12} md={4}>
             <div className="section_upload_services-upload">
@@ -107,16 +101,16 @@ function drozone({title}) {
                     <h4>{title}</h4>
                 </div>
                 <div className="upload-box">
-                <Dropzone onDrop={onDropFile} ref={dropzoneRef} noClick noKeyboard accept="application/pdf" disabled={dropDisable}>
-                    {({getRootProps, getInputProps, acceptedFiles,isDragReject,isDragAccept}) => {
+                <Dropzone maxSize={10485760}  onDrop={onDropFile} ref={dropzoneRef} noClick noKeyboard accept="application/pdf" disabled={dropDisable}>
+                    {({getRootProps, getInputProps, acceptedFiles,isDragReject,rejectedFiles}) => {
                         return (
                         <div className="container">
                             <div {...getRootProps({className: 'dropzone'})}>
                                 <input {...getInputProps()} />
                                 <div className="logo_wrapper" style={{backgroundColor:colorLoaded,transform:`translateY(${transY})`}}>
                                     {loaded ?
-                                    <img src="/images/correct.png" alt="logo correct"/> 
-                                    : 
+                                    <img src="/images/correct.png" alt="logo correct"/>
+                                    :
                                     <img src="/images/upload.png" alt="logo upload"/>}
                                 </div>
                                 {isDragReject ?
@@ -132,6 +126,29 @@ function drozone({title}) {
                                     }
                                     </React.Fragment>
                                 }
+                                <div className="overlay-progress" style={{opacity:hideOverlay.opacity,visibility:hideOverlay.visibility}}>
+                                    <svg
+                                        className="progress-ring"
+                                        width="120"
+                                        height="120">
+                                        <circle
+                                            ref={circle}
+                                            class="progress-ring__circle"
+                                            stroke="#f15d2a"
+                                            stroke-width="7"
+                                            fill="transparent"
+                                            r="46"
+                                            cx="60"
+                                            cy="60"
+                                            style={{strokeDasharray:`${circumference} ${circumference}`,strokeDashoffset:`${circumference}`}}
+                                        >
+                                        </circle>
+                                    </svg>
+                                    <p className="number_progress">{progressBar}%</p>
+                                </div>
+                                <div className="text-danger" style={{marginTop:'1rem',display:none}}>
+                                    File is too large.
+                                </div>
                             </div>
                         </div>
                         );
