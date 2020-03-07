@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
             enhanceApp: App => props => sheets.collect(<App {...props} />),
         });
 
-        return { 
+        return {
             ...initialProps,
             styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()], 
         }
