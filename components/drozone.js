@@ -98,7 +98,7 @@ function drozone({title}) {
         <Grid item xs={12} md={4}>
             <div className="section_upload_services-upload">
                 <div className="title">
-                    <h4>{title}</h4>
+                    <p>{title}</p>
                 </div>
                 <div className="upload-box">
                 <Dropzone maxSize={10485760}  onDrop={onDropFile} ref={dropzoneRef} noClick noKeyboard accept="application/pdf" disabled={dropDisable}>
