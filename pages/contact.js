@@ -124,7 +124,6 @@ function Contact () {
                                                     fullWidth
                                                     id="firstname"
                                                     placeholder="First Name"
-                                                    autoFocus
                                                     onChange={formik.handleChange} value={formik.values.firstname || ''}
                                                 />
                                             </Grid>
