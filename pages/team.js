@@ -1,5 +1,6 @@
 import React, { Component, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 import { Container,Grid,Button,GridListTile,Typography, Divider  } from '@material-ui/core'
 import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
@@ -8,6 +9,9 @@ import Ga from '../components/layout/ga'
 function Team () {
     return (
         <React.Fragment>
+            <Head>
+                <title>Prosper Kapital Ventura | Team</title>
+            </Head>
             <Ga>
             <header className="header_team">
                 <Container maxWidth='xl'>

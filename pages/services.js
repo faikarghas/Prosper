@@ -1,10 +1,14 @@
 import React, { useRef, useState, createRef } from 'react';
 import Link from 'next/link';
+import Head from 'next/head'
 import { Container,Grid,Button  } from '@material-ui/core';
+
 import MenuMobile from '../components/menu_mobile';
 import Footer from '../components/footer'
 import Ga from '../components/layout/ga';
 import DropzoneUpload from '../components/drozone'
+import Client from '../components/list-client/client'
+
 import { useStore } from "../lib/store";
 
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -51,6 +55,9 @@ function Services () {
 
     return (
         <React.Fragment>
+            <Head>
+                <title>Prosper Kapital Ventura | Services</title>
+            </Head>
             <Ga>
             <header className="header_services">
                 <Container maxWidth='xl'>
@@ -94,11 +101,18 @@ function Services () {
                                 <h3>Portfolio</h3>
                                 <ul>
                                     <li>
-                                        <h4>Forexdana Fund</h4>
-                                        Using a highly sophisticated and secure platform, our analytical and research team have
-                                        provided clear results in global currency market for clients. Providing comprehensive
-                                        insights, leading crucial decision making, and delivering consistent returns while
-                                        communicating all possible actions.
+                                        <div className="click">
+                                            <p>></p>
+                                            <h4>Forexdana Fund</h4>
+                                        </div>
+                                        <ul className="portAssets" style={{display:'block'}}>
+                                            <li>
+                                            Using a highly sophisticated and secure platform, our analytical and research team have
+                                            provided clear results in global currency market for clients. Providing comprehensive
+                                            insights, leading crucial decision making, and delivering consistent returns while
+                                            communicating all possible actions.
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -117,92 +131,12 @@ function Services () {
                                 <br/>
                                 <h3>Portfolio</h3>
                                 <ul>
-                                    <li>
-                                        <h4>PT. Sri Dharma Tunggal</h4>
-                                        <ul>
-                                            <li>
-                                            <p>Project Tol Serpong Cinere</p>
-                                            Client: CV Karya Wida Prakasa. 22 December 2018 – 2 January 2019
-                                            <br/>
-                                            <br/>
-                                            Project details include the financing of essential construction materials for the development in cross-region infrastructural projects in collaboration with local goverments involved.
-                                            </li>
-                                            <li>
-                                            <p>Project Tol Serpong Cinere</p>
-                                            Client: CV Karya Wida Prakasa. 2 January 2019 – 17 April 2019
-                                            <br/>
-                                            <br/>
-                                            Continuation of financing of cross-region infrastructural projects, including logistical efforts and the procurement of essential construction materials.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <h4>PT. Tangguh Swakarsa Mandiri</h4>
-                                        <ul>
-                                            <li>
-                                            <p>Procurement and Installation of construction projects for Menara BNI,Pejompongan</p>
-                                            Client: PT. Bank Negara Indonesia (Persero) TBK. 19 August 2019
-                                            <br/>
-                                            <br/>
-                                            Financing the procurement and installation of various essential building infrastructures for religious amenities during the continuing development for Menara BNI.
-                                            </li>
-                                            <li>
-                                            <p>Procurement during construction projects for Gedung Plaza BNI and Gedung DDC Slipi</p>
-                                            Client: PT. Bank Negara Indonesia (Persero) TBK. 30 September 2019
-                                            <br/>
-                                            <br/>
-                                            Financing the procurement of essential building infrastructure for utility purposes during the continuing development for Gedung Plaza BNI and Gedung DDC Slipi.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <h4>PT. Bersih Seperti Baru</h4>
-                                        <ul>
-                                            <li>
-                                            <p>Loan based Capital Investment.</p>
-                                            January 2019 – Continuous
-                                            <br/>
-                                            <br/>
-                                            Capital financing for retail operations including the supply of goods, manpower, and utility costs of the Spotless brand.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <h4>PT. Northcliff Indonesia</h4>
-                                        <ul>
-                                            <li>
-                                            <p>Private Equity Investment</p>
-                                            October 2018 – May 2019
-                                            <br/>
-                                            <br/>
-                                            Management and optimization of surplus assets in the investment of various efforts by Northcliff Indonesia as growth catalyst.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <h4>Esco Auto</h4>
-                                        <ul>
-                                            <li>
-                                            <p>Private Equity Investment</p>
-                                            18 March 2019 – 18 May 2019
-                                            <br/>
-                                            <br/>
-                                            Initial financing for procurement of used consumer vehicles for Esco Auto, project deliverable enabled the retail operations of the company
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <h4>Collab Store</h4>
-                                        <ul>
-                                            <li>
-                                            <p>Private Equity Investment</p>
-                                            March 2019 – Continuous
-                                            <br/>
-                                            <br/>
-                                            Initial financing for procurement of imported goods for online retail operations of Collabs Store on a trusted consumer level marketplace.
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    <Client title={'PT. Sri Dharma Tunggal'} data={'data1'}/>
+                                    <Client title={'PT. Tangguh Swakarsa Mandiri'} data={'data2'}/>
+                                    <Client title={'PT. Bersih Seperti Baru'} data={'data3'}/>
+                                    <Client title={'PT. Northcliff Indonesia'} data={'data4'}/>
+                                    <Client title={'Esco Auto'} data={'data5'}/>
+                                    <Client title={'Collab Store'} data={'data6'}/>
                                 </ul>
                             </div>
                         </div>

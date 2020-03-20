@@ -133,9 +133,9 @@ function drozone({title}) {
                                         height="120">
                                         <circle
                                             ref={circle}
-                                            class="progress-ring__circle"
+                                            className="progress-ring__circle"
                                             stroke="#f15d2a"
-                                            stroke-width="7"
+                                            strokeWidth="7"
                                             fill="transparent"
                                             r="46"
                                             cx="60"

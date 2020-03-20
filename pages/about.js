@@ -1,5 +1,6 @@
 import React, { Component, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 import { Container,Grid,Button  } from '@material-ui/core'
 import Avatar from '@material-ui/core/Avatar';
 import Slider from 'react-slick'
@@ -44,6 +45,9 @@ const settings = {
 function About ({deviceType}) {
     return (
         <React.Fragment>
+            <Head>
+                <title>Prosper Kapital Ventura | About</title>
+            </Head>
             <Ga>
             <header className="header_about">
                 <Container maxWidth='xl'>

@@ -1,5 +1,6 @@
 import React, { Component, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 import { Container,Grid,Button,GridListTile,Typography, Divider,CircularProgress,TextField  } from '@material-ui/core'
 import {useFormik } from 'formik'
 import * as Yup from 'yup';
@@ -63,6 +64,9 @@ function Contact () {
 
     return (
         <React.Fragment>
+            <Head>
+                <title>Prosper Kapital Ventura | Contact</title>
+            </Head>
             <Ga>
             <header className="header_contact">
                 <Container maxWidth='xl'>

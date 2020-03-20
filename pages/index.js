@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 import { Container,Grid,Button } from '@material-ui/core'
 import { motion, useViewportScroll } from "framer-motion";
 import MenuMobile from '../components/menu_mobile';
@@ -41,6 +42,9 @@ function index () {
       });
         return (
             <React.Fragment>
+                <Head>
+                    <title>Prosper Kapital Ventura | Home</title>
+                </Head>
                 <Ga>
                     <header className="header_home">
                         <Container maxWidth='xl'>

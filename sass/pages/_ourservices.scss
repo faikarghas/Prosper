@@ -32,7 +32,31 @@
                 }
                 h4{
                     font-size: 2rem;
+                    cursor: pointer;
+                }
+                .curPoint{
+                    cursor: pointer;
+                }
+                .show-init{
+                    display: block;
+                }
+                .click{
+                    display: inline-flex;
+                    align-items: center;
                     margin-bottom: 1.5rem;
+                    cursor: pointer;
+                    p{
+                        margin: 0;
+                        color: #f15d2a;
+                        transition: .2s all;
+                    }
+                    .rotate{
+                        transform: rotate(90deg);
+                    }
+                    h4{
+                        margin: 0;
+                        margin-left: 2.5rem;
+                    }
                 }
                 ul{
                     @include respond(phone){
@@ -42,18 +66,21 @@
                         position: relative;
                         list-style: none;
                         position: relative;
-                        padding-left: 32px;
-                        &::before{
-                            content: ">";
-                            color: $orange_prosper_color;
-                            position: absolute;
-                            left: 0;
-                            @include respond(phone){
-                                font-size: 3.2rem;
+
+                        .portAssets{
+                            li{
+                                margin-bottom: 2rem;
+                                margin-left: 35px;
                             }
                         }
-                        ul{
+
+                        .hidepostcap{
+                            display: none;
+                        }
+
+                        .portCap{
                             padding-left: 35px;
+                            margin-left: 35px;
                             li{
                                 margin-bottom: 2rem;
                                 &::before{
