@@ -53,14 +53,22 @@ function Contact () {
                     phonenumber: values.phonenumber,
                     message: values.message,
                 })
-            }).then((data)=>{
-                console.log(data);
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('Success:', data);
                 resetForm()
                 setLoading(false)
             })
 
         },
     });
+
+    // .then((data)=>{
+    //     console.log(data);
+    //     resetForm()
+    //     setLoading(false)
+    // }).
 
     return (
         <React.Fragment>

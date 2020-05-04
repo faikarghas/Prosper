@@ -7,7 +7,8 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "idb": "npm run build"
+    "idb": "npm run build",
+    "export": "next export"
   },
   "repository": {
     "type": "git",
