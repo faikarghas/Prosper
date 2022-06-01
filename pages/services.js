@@ -102,7 +102,7 @@ function Services () {
                                 <ul>
                                     <li>
                                         <div className="click">
-                                            <p>></p>
+                                            <p>&gt;</p>
                                             <h4>Forexdana Fund</h4>
                                         </div>
                                         <ul className="portAssets" style={{display:'block'}}>

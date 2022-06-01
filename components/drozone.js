@@ -29,7 +29,7 @@ function drozone({title}) {
 
 
     const dropzoneRef = createRef();
-        const openDialog = () => {
+    const openDialog = () => {
         // Note that the ref is set async,
         // so it might be null at some point
         if (dropzoneRef.current) {

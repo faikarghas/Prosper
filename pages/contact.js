@@ -64,12 +64,6 @@ function Contact () {
         },
     });
 
-    // .then((data)=>{
-    //     console.log(data);
-    //     resetForm()
-    //     setLoading(false)
-    // }).
-
     return (
         <React.Fragment>
             <Head>

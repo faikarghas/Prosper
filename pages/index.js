@@ -185,6 +185,9 @@ function index () {
                                         <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
                                             <img className="img_partner" src="/images/SDT.png" width="180px" alt="SDT-logo"/>
                                         </Grid>
+                                        <Grid item xs={6} md={4} lg={4} className="dp-center box_img">
+                                            <img className="img_partner" src="/images/Logo-Chapter-One-01.png" width="180px" alt="chapterone-logo"/>
+                                        </Grid>
                                     </Grid>
                                 </div>
                             </Container>

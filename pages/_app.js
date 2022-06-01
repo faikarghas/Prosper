@@ -4,6 +4,7 @@ import Router from 'next/router';
 import NProgress from 'nprogress'
 import { StoreProvider } from "../lib/store";
 
+
 import '../sass/main.scss';
 
 // NProgress
